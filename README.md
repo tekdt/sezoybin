@@ -13,11 +13,11 @@ Full documentation lives at **https://tekdt.xyz** (Docs page).
 
 ## 1. Try SEZOY in 10 minutes - no install needed (public test lab)
 
-A public SEZOY server (`192.168.138.1`) runs 24/7 with an open VPN Hub for testers.
+A public SEZOY server (`192.168.251.1`) runs 24/7 with an open VPN Hub for testers.
 You (machine C) join the same Layer-2 network over VPN, bridge a test VM straight
 into the VPN adapter, and your VM network-boots from the remote server **as if
 plugged into the same switch**. You can also open the shared dashboard at
-`https://192.168.138.1:5893` (if you were given access).
+`https://192.168.251.1:5893` (if you were given access).
 
 ### What you need
 
@@ -31,7 +31,7 @@ plugged into the same switch**. You can also open the shared dashboard at
 2. Create a virtual NIC once: **New Virtual Network Adapter** → name it `SEZOY-VPN` → Enable.
 3. Import the profile from this repo: **New VPN Connection Setting → Import VPN Connection Setting**,
    pick [`SEZOY-VPN-Connection.vpn`](SEZOY-VPN-Connection.vpn) - every field fills itself in:
-   - Host: `sezoyhost.vpnazure.net`, port `443`, hub `SEZOY.HUB`, user `tester00`.
+   - Host: `sezoyhost.vpnazure.net`, port `443`, hub `SEZOY.HUB`, user `tester00` `tester99`.
 4. Double-click the connection → **Connected**.
    Errors `1 / 2 / 691` mean wrong hub/user/password or port 443 blocked - recheck and retry.
 
@@ -50,7 +50,7 @@ plugged into the same switch**. You can also open the shared dashboard at
 
 ### Step 3 - Boot and test
 
-1. Power on → PXE → the VM gets an IP like `192.168.138.x` → the SEZOY boot menu
+1. Power on → PXE → the VM gets an IP like `192.168.251.x` → the SEZOY boot menu
    appears (allow 5–15 s over the Internet).
 2. Pick a shared Windows/Linux ISO and the tester template → deploy.
 3. **Lab etiquette** (the pool holds ~50 addresses, one server for everyone):

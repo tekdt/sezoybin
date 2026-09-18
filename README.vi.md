@@ -13,10 +13,10 @@ Tài liệu đầy đủ nằm ở **https://tekdt.xyz** (trang Docs).
 
 ## 1. Trải nghiệm SEZOY trong 10 phút - không cần cài đặt (lab test công cộng)
 
-Máy chủ SEZOY công cộng (`192.168.138.1`) chạy 24/24 kèm VPN Hub mở cho tester.
+Máy chủ SEZOY công cộng (`192.168.251.1`) chạy 24/24 kèm VPN Hub mở cho tester.
 Bạn (máy C) joined cùng mạng Layer-2 qua VPN, bridge máy ảo thẳng vào card VPN,
 và máy ảo của bạn sẽ boot mạng từ server ở xa **như đang cắm cùng switch**.
-Bạn cũng có thể mở dashboard dùng chung qua `https://192.168.138.1:5893`
+Bạn cũng có thể mở dashboard dùng chung qua `https://192.168.251.1:5893`
 (nếu được cấp quyền).
 
 ### Chuẩn bị
@@ -31,7 +31,7 @@ Bạn cũng có thể mở dashboard dùng chung qua `https://192.168.138.1:5893
 2. Tạo card ảo một lần: **New Virtual Network Adapter** → đặt tên `SEZOY-VPN` → Enable.
 3. Import profile trong repo này: **New VPN Connection Setting → Import VPN Connection Setting**,
    chọn [`SEZOY-VPN-Connection.vpn`](SEZOY-VPN-Connection.vpn) - mọi trường tự điền:
-   - Host: `sezoyhost.vpnazure.net`, cổng `443`, hub `SEZOY.HUB`, user `tester00`.
+   - Host: `sezoyhost.vpnazure.net`, cổng `443`, hub `SEZOY.HUB`, user `tester00` / `tester99`.
 4. Double-click kết nối → **Connected**.
    Lỗi `1 / 2 / 691` nghĩa là sai hub/user/pass hoặc cổng 443 bị chặn - kiểm tra lại.
 
@@ -49,7 +49,7 @@ Bạn cũng có thể mở dashboard dùng chung qua `https://192.168.138.1:5893
 
 ### Bước 3 - Boot và test
 
-1. Bật máy → PXE → máy ảo nhận IP dạng `192.168.138.x` → menu boot SEZOY hiện ra
+1. Bật máy → PXE → máy ảo nhận IP dạng `192.168.251.x` → menu boot SEZOY hiện ra
    (qua Internet chờ 5–15 s).
 2. Chọn ISO Windows/Linux + mẫu cài dành cho tester → triển khai.
 3. **Phép lịch sự trong lab** (dải IP chỉ ~50 địa chỉ, một server cho mọi người):
