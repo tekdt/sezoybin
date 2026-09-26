@@ -1,0 +1,246 @@
+================================================================
+PART 1 — ENGLISH (default)
+THIRD-PARTY SOFTWARE NOTICES — SEZOY (proprietary, closed-source)
+================================================================
+
+SEZOY is proprietary software by TekDT (source code is not published).
+This file lists only the THIRD-PARTY components that SEZOY either
+bundles (shipped inside the MSI, under Tools/) or downloads on demand
+(only with your explicit consent). Each third-party component REMAINS
+the property of its respective owners and is governed by its OWN
+license terms. A third-party license applies to that component only —
+it does NOT apply to SEZOY itself.
+
+Some tools (for example system-modifying utilities) affect how Windows
+behaves. TekDT is not responsible for misuse of these tools. You are
+responsible for complying with each component's license and with local
+law.
+
+---
+A. COMPONENTS BUNDLED IN THE MSI (Tools/ directory)
+
+1. Ventoy
+   License: GNU General Public License v3.0 (GPL-3.0)
+   Source: https://github.com/ventoy/Ventoy
+   Note: Ventoy sources are taken from upstream as required by GPL-3.0.
+
+2. aria2
+   License: GNU General Public License v2.0 (GPL-2.0)
+   Source: https://aria2.github.io/
+
+3. wimlib
+   License: GNU GPL v3 / LGPL (depending on the file; see the
+   COPYING*.txt files in Tools/wimlib)
+   Source: https://wimlib.net/
+
+4. WinCDEmu
+   License: GNU Lesser General Public License (LGPL)
+   Source: https://github.com/sysprogs/WinCDEmu
+
+5. 7-Zip
+   License: GNU LGPL / BSD (depending on the file)
+   Source: https://www.7-zip.org/
+
+6. FIDO Script (Fido.ps1)
+   License: MIT License
+   Source: https://github.com/pbatard/Fido
+
+7. iPXE Bootloaders (Tools/Bootloaders directory)
+   License: GNU General Public License v2.0 (GPL-2.0)
+   Source: https://ipxe.org/ — https://github.com/ipxe/ipxe
+
+8. busybox
+   License: GNU General Public License v2.0 (GPL-2.0)
+   Source: https://www.busybox.net/
+
+9. erofs-utils
+   License: GNU General Public License v2.0 (GPL-2.0)
+   Source: https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git
+
+10. noVNC (including vendor/pako)
+    License: MPL-2.0 / BSD-2-Clause / BSD-3-Clause / OFL-1.1
+    (depending on the file; see the LICENSE.* files in Tools/noVNC)
+    Source: https://github.com/novnc/noVNC
+
+11. ChromeDriver / MSEdgeDriver
+    License: Subject to the Google / Microsoft terms respectively.
+    Note: Used only to automate the browser when downloading ISOs.
+    TekDT does not re-license or redistribute them outside technical use.
+
+12. Microsoft OSCDIMG (part of the Windows ADK)
+    License: A Microsoft tool.
+    Note: Use is subject to Microsoft's license terms. TekDT does not
+    re-license, redistribute, or modify it.
+
+---
+B. ON-DEMAND COMPONENTS (NOT bundled in the main EXE/MSI)
+
+13. WinDivert — optional Add-on for Wi-Fi Hotspot + HTTP Boot
+    License: GNU Lesser General Public License v3.0 (LGPLv3)
+    Source: https://github.com/basil00/WinDivert
+    Note: SEZOY does NOT bundle WinDivert in the main EXE/MSI. Users who need
+    Wi-Fi Hotspot coexistence explicitly consent to download the pinned
+    WinDivert 2.x release (WinDivert64.dll + WinDivert64.sys) from the official
+    basil00/WinDivert repository; files are SHA-256 verified before the kernel
+    driver is loaded. Shipping/distribution of the Add-on remains subject to
+    the LGPLv3 terms, including source offer for the WinDivert component.
+
+14. pydivert (pure-Python bindings, part of the WinDivert Add-on)
+    License: GNU Lesser General Public License v3.0-or-later OR GNU General
+    Public License v2.0-or-later (LGPL-3.0-or-later OR GPL-2.0-or-later)
+    Source: https://github.com/ffalcinelli/pydivert
+    (via the official PyPI wheel, pinned version + SHA-256)
+    Note: SEZOY does NOT bundle pydivert in the main EXE/MSI
+    (--nofollow-import-to=pydivert). Frozen builds with no `pydivert` package
+    download the pinned pure-Python wheel from PyPI on first Wi-Fi use (after
+    the same Add-on consent); only the 13 runtime .py files are installed,
+    wheel SHA-256 verified first. No driver or bindings ship with SEZOY itself.
+
+15. Driver Packages (DriverPack.io / Snappy Driver Installer origin)
+    TekDT does NOT pre-ship drivers in the MSI (apart from the
+    DriverPack-Offline.torrent file so users can download packs themselves).
+    Drivers are downloaded and integrated only when you actively choose and
+    confirm. Some drivers exist only to guarantee basic boot and hardware
+    detection inside WinPE. Using drivers is subject to each hardware
+    vendor's license terms.
+    Source: https://sourceforge.net/projects/snappy-driver-installer/
+
+16. Generic Windows Installation Keys
+    Note: Generic Windows Installation Keys are published publicly by
+    Microsoft for deployment and edition selection during Windows setup.
+
+---
+NOTE ON SOURCES
+
+- SEZOY is closed-source: TekDT does NOT publish the SEZOY source code.
+- The old TekDT BMC paragraph ("TekDT sources under GPL-3.0 at
+  github.com/tekdt") has been REMOVED — it no longer applies to SEZOY.
+- For GPL/LGPL components shipped with SEZOY (Ventoy, wimlib, iPXE,
+  busybox, erofs-utils, aria2, ...), the source-offer obligation is met
+  via the upstream repository links above plus the COPYING/LICENSE files
+  shipped in each corresponding Tools/ subdirectory.
+
+
+================================================================
+PART 2 — TIẾNG VIỆT
+THÔNG BÁO PHẦN MỀM BÊN THỨ BA — SEZOY (đóng, proprietary)
+================================================================
+
+SEZOY là phần mềm đóng của TekDT (không công bố mã nguồn).
+File này chỉ liệt kê các THÀNH PHẦN BÊN THỨ BA mà SEZOY hoặc đóng gói
+kèm (trong MSI, thư mục Tools/) hoặc tải theo yêu cầu (chỉ khi bạn
+đồng ý rõ ràng). Mỗi thành phần bên thứ ba VẪN thuộc sở hữu của tác
+giả tương ứng và chịu sự điều chỉnh của giấy phép RIÊNG của nó. Giấy
+phép bên thứ ba chỉ áp dụng cho thành phần đó — KHÔNG áp dụng cho
+chính SEZOY.
+
+Một số tool (ví dụ trình thay đổi hệ thống) có ảnh hưởng đến hoạt động
+Windows. TekDT không chịu trách nhiệm về việc sử dụng sai mục đích các
+tool này. Bạn chịu trách nhiệm tuân thủ giấy phép của từng thành phần
+và pháp luật địa phương.
+
+---
+A. THÀNH PHẦN ĐÓNG GÓI KÈM TRONG MSI (thư mục Tools/)
+
+1. Ventoy
+   Giấy phép: GNU General Public License v3.0 (GPL-3.0)
+   Nguồn: https://github.com/ventoy/Ventoy
+   Ghi chú: Mã nguồn Ventoy lấy từ upstream theo yêu cầu GPL-3.0.
+
+2. aria2
+   Giấy phép: GNU General Public License v2.0 (GPL-2.0)
+   Nguồn: https://aria2.github.io/
+
+3. wimlib
+   Giấy phép: GNU GPL v3 / LGPL (tùy file; xem các file
+   COPYING*.txt trong Tools/wimlib)
+   Nguồn: https://wimlib.net/
+
+4. WinCDEmu
+   Giấy phép: GNU Lesser General Public License (LGPL)
+   Nguồn: https://github.com/sysprogs/WinCDEmu
+
+5. 7-Zip
+   Giấy phép: GNU LGPL / BSD (tùy file)
+   Nguồn: https://www.7-zip.org/
+
+6. FIDO Script (Fido.ps1)
+   Giấy phép: MIT License
+   Nguồn: https://github.com/pbatard/Fido
+
+7. iPXE Bootloaders (thư mục Tools/Bootloaders)
+   Giấy phép: GNU General Public License v2.0 (GPL-2.0)
+   Nguồn: https://ipxe.org/ — https://github.com/ipxe/ipxe
+
+8. busybox
+   Giấy phép: GNU General Public License v2.0 (GPL-2.0)
+   Nguồn: https://www.busybox.net/
+
+9. erofs-utils
+   Giấy phép: GNU General Public License v2.0 (GPL-2.0)
+   Nguồn: https://git.kernel.org/pub/scm/linux/kernel/git/xiang/erofs-utils.git
+
+10. noVNC (kể cả vendor/pako)
+    Giấy phép: MPL-2.0 / BSD-2-Clause / BSD-3-Clause / OFL-1.1
+    (tùy file; xem các file LICENSE.* trong Tools/noVNC)
+    Nguồn: https://github.com/novnc/noVNC
+
+11. ChromeDriver / MSEdgeDriver
+    Giấy phép: Theo điều khoản của Google / Microsoft tương ứng.
+    Ghi chú: Chỉ dùng để tự động hóa trình duyệt khi tải ISO; TekDT
+    không cấp phép lại, không phân phối lại ngoài phạm vi kỹ thuật.
+
+12. Microsoft OSCDIMG (thuộc Windows ADK)
+    Giấy phép: Công cụ của Microsoft.
+    Ghi chú: Việc sử dụng tuân theo điều khoản cấp phép của Microsoft.
+    TekDT không cấp phép lại, không phân phối lại và không sửa đổi.
+
+---
+B. THÀNH PHẦN TẢI THEO YÊU CẦU (KHÔNG đóng gói trong EXE/MSI chính)
+
+13. WinDivert — Add-on tùy chọn cho Wi-Fi Hotspot + HTTP Boot
+    Giấy phép: GNU Lesser General Public License v3.0 (LGPLv3)
+    Nguồn: https://github.com/basil00/WinDivert
+    Ghi chú: SEZOY KHÔNG đóng gói WinDivert trong EXE/MSI chính. Người
+    cần Wi-Fi Hotspot phải đồng ý rõ ràng để tải bản WinDivert 2.x đã
+    ghim (WinDivert64.dll + WinDivert64.sys) từ repository chính thức
+    basil00/WinDivert; file được xác thực SHA-256 trước khi nạp driver
+    kernel. Việc phân phối Add-on vẫn chịu điều khoản LGPLv3, bao gồm
+    nghĩa vụ cung cấp mã nguồn của thành phần WinDivert.
+
+14. pydivert (bindings Python thuần, thuộc Add-on WinDivert)
+    Giấy phép: GNU Lesser General Public License v3.0-or-later HOẶC GNU
+    General Public License v2.0-or-later
+    Nguồn: https://github.com/ffalcinelli/pydivert
+    (qua wheel PyPI chính thức, ghim phiên bản + SHA-256)
+    Ghi chú: SEZOY KHÔNG đóng gói pydivert trong EXE/MSI chính
+    (--nofollow-import-to=pydivert). Bản frozen thiếu gói `pydivert`
+    sẽ tải wheel Python thuần đã ghim từ PyPI ở lần dùng Wi-Fi đầu
+    tiên (sau cùng một lần đồng ý Add-on); chỉ cài 13 file .py runtime,
+    wheel được xác thực SHA-256 trước. Không driver hay bindings nào
+    đi kèm SEZOY.
+
+15. Gói Driver (nguồn DriverPack.io / Snappy Driver Installer)
+    TekDT KHÔNG phân phối sẵn driver kèm MSI (ngoài file torrent
+    DriverPack-Offline.torrent để người dùng tự tải). Việc tải xuống và
+    tích hợp driver chỉ thực hiện khi bạn chủ động lựa chọn và xác nhận.
+    Một số driver chỉ nhằm đảm bảo khởi động và nhận diện phần cứng cơ
+    bản trong WinPE. Việc sử dụng driver tuân theo giấy phép của từng
+    nhà sản xuất phần cứng.
+    Nguồn: https://sourceforge.net/projects/snappy-driver-installer/
+
+16. Generic Windows Installation Keys
+    Ghi chú: Generic Windows Installation Keys được Microsoft công bố
+    công khai cho mục đích triển khai và lựa chọn phiên bản trong quá
+    trình cài đặt Windows.
+
+---
+GHI CHÚ VỀ MÃ NGUỒN
+
+- SEZOY là closed-source: TekDT KHÔNG công bố mã nguồn SEZOY.
+- Đoạn cũ của TekDT BMC (“mã nguồn TekDT theo GPL-3.0 tại
+  github.com/tekdt”) ĐÃ BỊ XÓA — không còn đúng với SEZOY.
+- Với các thành phần GPL/LGPL được phân phối kèm (Ventoy, wimlib, iPXE,
+  busybox, erofs-utils, aria2, ...), nghĩa vụ source-offer được thực
+  hiện bằng link repository upstream ở từng mục cộng các file COPYING/
+  LICENSE đi kèm trong thư mục Tools tương ứng.
