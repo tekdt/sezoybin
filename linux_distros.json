@@ -1,0 +1,1562 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-10-14T03:54:55Z",
+  "source_repo": "https://github.com/tekdt/sezoybin",
+  "note": "Data file for the SEZOY 'Linux Distro' download tab. SEZOY downloads urls[0] first and falls through to the next URL on failure. Run update_linux_distros.py to refresh automatically.",
+  "distros": [
+    {
+      "id": "ubuntu",
+      "name": "Ubuntu",
+      "site": "https://releases.ubuntu.com/",
+      "editions": [
+        {
+          "id": "desktop-lts",
+          "name": "Desktop LTS",
+          "versions": [
+            {
+              "version": "24.04.4",
+              "arch": "amd64",
+              "iso": "ubuntu-24.04.4-desktop-amd64.iso",
+              "urls": [
+                "https://releases.ubuntu.com/24.04/ubuntu-24.04.4-desktop-amd64.iso",
+                "https://releases.ubuntu.com/noble/ubuntu-24.04.4-desktop-amd64.iso"
+              ],
+              "sha256": "3a4c9877b483ab46d7c3fbe165a0db275e1ae3cfe56a5657e5a47c2f99a99d1e"
+            },
+            {
+              "version": "24.04.3",
+              "arch": "amd64",
+              "iso": "ubuntu-24.04.3-desktop-amd64.iso",
+              "urls": [
+                "https://releases.ubuntu.com/24.04/ubuntu-24.04.3-desktop-amd64.iso",
+                "https://releases.ubuntu.com/noble/ubuntu-24.04.3-desktop-amd64.iso"
+              ],
+              "sha256": "faabcf33ae53976d2b8207a001ff32f4e5daae013505ac7188c9ea63988f8328"
+            }
+          ]
+        },
+        {
+          "id": "live-server",
+          "name": "Live Server",
+          "versions": [
+            {
+              "version": "24.04.4",
+              "arch": "amd64",
+              "iso": "ubuntu-24.04.4-live-server-amd64.iso",
+              "urls": [
+                "https://releases.ubuntu.com/24.04/ubuntu-24.04.4-live-server-amd64.iso",
+                "https://releases.ubuntu.com/noble/ubuntu-24.04.4-live-server-amd64.iso"
+              ],
+              "sha256": "e907d92eeec9df64163a7e454cbc8d7755e8ddc7ed42f99dbc80c40f1a138433"
+            },
+            {
+              "version": "24.04.3",
+              "arch": "amd64",
+              "iso": "ubuntu-24.04.3-live-server-amd64.iso",
+              "urls": [
+                "https://releases.ubuntu.com/24.04/ubuntu-24.04.3-live-server-amd64.iso",
+                "https://releases.ubuntu.com/noble/ubuntu-24.04.3-live-server-amd64.iso"
+              ],
+              "sha256": "c3514bf0056180d09376462a7a1b4f213c1d6e8ea67fae5c25099c6fd3d8274b"
+            },
+            {
+              "version": "24.04.5",
+              "arch": "amd64",
+              "iso": "ubuntu-24.04.5-live-server-amd64.iso",
+              "sha256": "97f3d7ffb032c3eb3b23d2c8be9cc76e60c2c1f2c0146ba5ba9fe01cafae0fd8",
+              "urls": [
+                "https://releases.ubuntu.com/24.04/ubuntu-24.04.5-live-server-amd64.iso",
+                "https://releases.ubuntu.com/noble/ubuntu-24.04.5-live-server-amd64.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "debian",
+      "name": "Debian",
+      "site": "https://www.debian.org/distrib/",
+      "editions": [
+        {
+          "id": "netinst",
+          "name": "Netinst (small net installer)",
+          "versions": [
+            {
+              "version": "13.7.0",
+              "arch": "amd64",
+              "iso": "debian-13.7.0-amd64-netinst.iso",
+              "size": 792723456,
+              "urls": [
+                "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.7.0-amd64-netinst.iso",
+                "https://cdimage.debian.org/debian-cd/13.7.0/amd64/iso-cd/debian-13.7.0-amd64-netinst.iso"
+              ],
+              "sha256": "a7ef94ac2fb9a7fec454552abd629b7cc9d5155c886165a45649f5ce6167e355"
+            }
+          ]
+        },
+        {
+          "id": "dvd",
+          "name": "DVD (full offline set, disc 1)",
+          "versions": [
+            {
+              "version": "13.7.0",
+              "arch": "amd64",
+              "iso": "debian-13.7.0-amd64-DVD-1.iso",
+              "urls": [
+                "https://cdimage.debian.org/debian-cd/current/amd64/iso-dvd/debian-13.7.0-amd64-DVD-1.iso",
+                "https://cdimage.debian.org/debian-cd/13.7.0/amd64/iso-dvd/debian-13.7.0-amd64-DVD-1.iso"
+              ],
+              "sha256": "347b6c67a3cc0b7ddb60b178f683470c4e2b7ac426c996d9337a2ff36c1a32d2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fedora",
+      "name": "Fedora",
+      "site": "https://fedoraproject.org/workstation/download",
+      "editions": [
+        {
+          "id": "workstation-live",
+          "name": "Workstation Live",
+          "versions": [
+            {
+              "version": "42",
+              "arch": "x86_64",
+              "iso": "Fedora-Workstation-Live-42-1.1.x86_64.iso",
+              "size": 2398523392,
+              "sha256": "98958d80e8a80eabe61275337f969c8e2212adc3a223d9bbdab9411bb1c95cba",
+              "urls": [
+                "https://download.fedoraproject.org/pub/fedora/linux/releases/42/Workstation/x86_64/iso/Fedora-Workstation-Live-42-1.1.x86_64.iso",
+                "https://dl.fedoraproject.org/pub/fedora/linux/releases/42/Workstation/x86_64/iso/Fedora-Workstation-Live-42-1.1.x86_64.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "server-dvd",
+          "name": "Server DVD",
+          "versions": [
+            {
+              "version": "42",
+              "arch": "x86_64",
+              "iso": "Fedora-Server-dvd-x86_64-42-1.1.iso",
+              "size": 2925920256,
+              "sha256": "7fee9ac23b932c6a8be36fc1e830e8bba5f83447b0f4c81fe2425620666a7043",
+              "urls": [
+                "https://download.fedoraproject.org/pub/fedora/linux/releases/42/Server/x86_64/iso/Fedora-Server-dvd-x86_64-42-1.1.iso",
+                "https://dl.fedoraproject.org/pub/fedora/linux/releases/42/Server/x86_64/iso/Fedora-Server-dvd-x86_64-42-1.1.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kali",
+      "name": "Kali Linux",
+      "site": "https://www.kali.org/get-kali/",
+      "editions": [
+        {
+          "id": "installer",
+          "name": "Installer (full offline)",
+          "versions": [
+            {
+              "version": "2026.2",
+              "arch": "amd64",
+              "iso": "kali-linux-2026.2-installer-amd64.iso",
+              "sha256": "6dbefacc95e3b556c19c48e8bae39b8b505e2d3a1aba0bfb7ab62b036c3d2ba3",
+              "urls": [
+                "https://cdimage.kali.org/current/kali-linux-2026.2-installer-amd64.iso"
+              ]
+            },
+            {
+              "version": "2026.2",
+              "arch": "arm64",
+              "iso": "kali-linux-2026.2-installer-arm64.iso",
+              "sha256": "b9a08050ee522fbee7cac703b1bc48178f79eb974c962d4ed9dc1ccfdfa77fb6",
+              "urls": [
+                "https://cdimage.kali.org/current/kali-linux-2026.2-installer-arm64.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "netinst",
+          "name": "NetInstaller (small)",
+          "versions": [
+            {
+              "version": "2026.2",
+              "arch": "amd64",
+              "iso": "kali-linux-2026.2-installer-netinst-amd64.iso",
+              "sha256": "d32f929dacc48134a31461a09f2160d13ad1d26b820cee920446813ca979b39b",
+              "urls": [
+                "https://cdimage.kali.org/current/kali-linux-2026.2-installer-netinst-amd64.iso"
+              ]
+            },
+            {
+              "version": "2026.2",
+              "arch": "arm64",
+              "iso": "kali-linux-2026.2-installer-netinst-arm64.iso",
+              "sha256": "8ca1bdd6a85f37e380eca84c780256b6e634fc768426396f51967ec3be006ed1",
+              "urls": [
+                "https://cdimage.kali.org/current/kali-linux-2026.2-installer-netinst-arm64.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "live",
+          "name": "Live (try without installing)",
+          "versions": [
+            {
+              "version": "2026.2",
+              "arch": "amd64",
+              "iso": "kali-linux-2026.2-live-amd64.iso",
+              "sha256": "49e90e694d1b3dedd47f94afbe99dfdd5afb41c8462b638bbd332929769c773a",
+              "urls": [
+                "https://cdimage.kali.org/current/kali-linux-2026.2-live-amd64.iso"
+              ]
+            },
+            {
+              "version": "2026.2",
+              "arch": "arm64",
+              "iso": "kali-linux-2026.2-live-arm64.iso",
+              "sha256": "e9b41bfa21eea4e1a4ea941f0170aad5d1bdbbec6425254c5fc6304927245493",
+              "urls": [
+                "https://cdimage.kali.org/current/kali-linux-2026.2-live-arm64.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arch",
+      "name": "Arch Linux",
+      "site": "https://archlinux.org/download/",
+      "editions": [
+        {
+          "id": "base",
+          "name": "Base ISO (monthly snapshot)",
+          "versions": [
+            {
+              "version": "2026.10.01",
+              "arch": "x86_64",
+              "iso": "archlinux-2026.10.01-x86_64.iso",
+              "sha256": "684ded26c63240ff4a41e8c25ee84ea6da233f557364821f13d12c2b0a9059a5",
+              "urls": [
+                "https://geo.mirror.pkgbuild.com/iso/latest/archlinux-2026.10.01-x86_64.iso",
+                "https://mirror.rackspace.com/archlinux/iso/latest/archlinux-2026.10.01-x86_64.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mint",
+      "name": "Linux Mint",
+      "site": "https://linuxmint.com/download.php",
+      "editions": [
+        {
+          "id": "cinnamon",
+          "name": "Cinnamon (flagship)",
+          "versions": [
+            {
+              "version": "22.3",
+              "arch": "amd64",
+              "iso": "linuxmint-22.3-cinnamon-64bit.iso",
+              "sha256": "a081ab202cfda17f6924128dbd2de8b63518ac0531bcfe3f1a1b88097c459bd4",
+              "urls": [
+                "https://mirrors.kernel.org/linuxmint/stable/22.3/linuxmint-22.3-cinnamon-64bit.iso",
+                "https://mirror.clarkson.edu/linuxmint-images/stable/22.3/linuxmint-22.3-cinnamon-64bit.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mate",
+          "name": "MATE (classic desktop)",
+          "versions": [
+            {
+              "version": "22.3",
+              "arch": "amd64",
+              "iso": "linuxmint-22.3-mate-64bit.iso",
+              "sha256": "7609294da613b75eea89bb918292125e9f06418a368136fb190466e15bf8c373",
+              "urls": [
+                "https://mirrors.kernel.org/linuxmint/stable/22.3/linuxmint-22.3-mate-64bit.iso",
+                "https://mirror.clarkson.edu/linuxmint-images/stable/22.3/linuxmint-22.3-mate-64bit.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "xfce",
+          "name": "Xfce (lightweight)",
+          "versions": [
+            {
+              "version": "22.3",
+              "arch": "amd64",
+              "iso": "linuxmint-22.3-xfce-64bit.iso",
+              "sha256": "45a835b5dddaf40e84d776549e0b19b3fbd49673b6cc6434ebddbfcd217df776",
+              "urls": [
+                "https://mirrors.kernel.org/linuxmint/stable/22.3/linuxmint-22.3-xfce-64bit.iso",
+                "https://mirror.clarkson.edu/linuxmint-images/stable/22.3/linuxmint-22.3-xfce-64bit.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kubuntu",
+      "name": "Kubuntu",
+      "site": "https://kubuntu.org/getkubuntu/",
+      "editions": [
+        {
+          "id": "desktop-lts",
+          "name": "Desktop LTS (KDE Plasma)",
+          "versions": [
+            {
+              "version": "24.04.5",
+              "arch": "amd64",
+              "iso": "kubuntu-24.04.5-desktop-amd64.iso",
+              "sha256": "ae59e59c54337bcd8f8e60825b4a3f58797121ae0e89855524ffc92b8075c1d6",
+              "urls": [
+                "https://cdimage.ubuntu.com/kubuntu/releases/24.04/release/kubuntu-24.04.5-desktop-amd64.iso"
+              ]
+            },
+            {
+              "version": "24.04.4",
+              "arch": "amd64",
+              "iso": "kubuntu-24.04.4-desktop-amd64.iso",
+              "sha256": "02cda2568cb96c090b0438a31a7d2e7b07357fde16217c215e7c3f45263bcc49",
+              "urls": [
+                "https://cdimage.ubuntu.com/kubuntu/releases/24.04/release/kubuntu-24.04.4-desktop-amd64.iso"
+              ]
+            },
+            {
+              "version": "24.04.3",
+              "arch": "amd64",
+              "iso": "kubuntu-24.04.3-desktop-amd64.iso",
+              "sha256": "8c69dd380e5a8969b77ca1708da59f0b9a50d0c151f0a65917180585697dd1e6",
+              "urls": [
+                "https://cdimage.ubuntu.com/kubuntu/releases/24.04/release/kubuntu-24.04.3-desktop-amd64.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lubuntu",
+      "name": "Lubuntu",
+      "site": "https://lubuntu.me/downloads/",
+      "editions": [
+        {
+          "id": "desktop-lts",
+          "name": "Desktop LTS (LXQt)",
+          "versions": [
+            {
+              "version": "24.04.5",
+              "arch": "amd64",
+              "iso": "lubuntu-24.04.5-desktop-amd64.iso",
+              "sha256": "303a769f681014c801844e33d7918842878067eb644e3c418d699db25f4b4bc6",
+              "urls": [
+                "https://cdimage.ubuntu.com/lubuntu/releases/24.04/release/lubuntu-24.04.5-desktop-amd64.iso"
+              ]
+            },
+            {
+              "version": "24.04.4",
+              "arch": "amd64",
+              "iso": "lubuntu-24.04.4-desktop-amd64.iso",
+              "sha256": "5ca3ab769f1538fec7c7d8a5af2e73d3f06ea22f979f6560a9cc4acaf042a5fa",
+              "urls": [
+                "https://cdimage.ubuntu.com/lubuntu/releases/24.04/release/lubuntu-24.04.4-desktop-amd64.iso"
+              ]
+            },
+            {
+              "version": "24.04.3",
+              "arch": "amd64",
+              "iso": "lubuntu-24.04.3-desktop-amd64.iso",
+              "sha256": "d1c502297205db97e2f1195f9e5a1a86c7a9754dfd4758b96f41e384eb233aab",
+              "urls": [
+                "https://cdimage.ubuntu.com/lubuntu/releases/24.04/release/lubuntu-24.04.3-desktop-amd64.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "xubuntu",
+      "name": "Xubuntu",
+      "site": "https://xubuntu.org/download/",
+      "editions": [
+        {
+          "id": "desktop-lts",
+          "name": "Desktop LTS (Xfce)",
+          "versions": [
+            {
+              "version": "24.04.5",
+              "arch": "amd64",
+              "iso": "xubuntu-24.04.5-desktop-amd64.iso",
+              "sha256": "4ed869ebf2b9f2f6118c1b60b9ed07576e8fe3d5cdfe10aae06869e669878b81",
+              "urls": [
+                "https://cdimage.ubuntu.com/xubuntu/releases/24.04/release/xubuntu-24.04.5-desktop-amd64.iso"
+              ]
+            },
+            {
+              "version": "24.04.4",
+              "arch": "amd64",
+              "iso": "xubuntu-24.04.4-desktop-amd64.iso",
+              "sha256": "fc2e995bb05c41ea19f1dbfd91f6deea7b2aed7a83b9934d98fc9d9cac527d97",
+              "urls": [
+                "https://cdimage.ubuntu.com/xubuntu/releases/24.04/release/xubuntu-24.04.4-desktop-amd64.iso"
+              ]
+            },
+            {
+              "version": "24.04.3",
+              "arch": "amd64",
+              "iso": "xubuntu-24.04.3-desktop-amd64.iso",
+              "sha256": "b61e083d8a5ab003bad6ef7ea31ec21d7bfdf19b99d75987ab3fa3bbe85ec1bf",
+              "urls": [
+                "https://cdimage.ubuntu.com/xubuntu/releases/24.04/release/xubuntu-24.04.3-desktop-amd64.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opensuse-leap",
+      "name": "openSUSE Leap",
+      "site": "https://get.opensuse.org/leap/",
+      "editions": [
+        {
+          "id": "dvd",
+          "name": "Full DVD",
+          "versions": [
+            {
+              "version": "15.6",
+              "arch": "x86_64",
+              "iso": "openSUSE-Leap-15.6-DVD-x86_64-Build710.3-Media.iso",
+              "sha256": "a74d4072e639c75ca127df3d869c1e57bcc44a093a969550f348a3ead561fe4f",
+              "urls": [
+                "https://download.opensuse.org/distribution/leap/15.6/iso/openSUSE-Leap-15.6-DVD-x86_64-Build710.3-Media.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "net",
+          "name": "Net installer",
+          "versions": [
+            {
+              "version": "15.6",
+              "arch": "x86_64",
+              "iso": "openSUSE-Leap-15.6-NET-x86_64-Build710.3-Media.iso",
+              "sha256": "0984b36d0f420487f2766733ff8f9d779ade81d432b08e40e852a675313750bb",
+              "urls": [
+                "https://download.opensuse.org/distribution/leap/15.6/iso/openSUSE-Leap-15.6-NET-x86_64-Build710.3-Media.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opensuse-tumbleweed",
+      "name": "openSUSE Tumbleweed",
+      "site": "https://get.opensuse.org/tumbleweed/",
+      "editions": [
+        {
+          "id": "dvd",
+          "name": "DVD snapshot",
+          "versions": [
+            {
+              "version": "20261012",
+              "arch": "x86_64",
+              "iso": "openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261012-Media.iso",
+              "sha256": "288c7cf1c2a8b3257310912c54dc90a7b27f37a09494841006358ae443ab4247",
+              "urls": [
+                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261012-Media.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "net",
+          "name": "Net installer snapshot",
+          "versions": [
+            {
+              "version": "20261012",
+              "arch": "x86_64",
+              "iso": "openSUSE-Tumbleweed-NET-x86_64-Snapshot20261012-Media.iso",
+              "sha256": "c7f4ac0c0efb41d1c928cc3958e3e377b1acca159518aa28e11fd85388fbe601",
+              "urls": [
+                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20261012-Media.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "antix",
+      "name": "antiX Linux",
+      "site": "https://antixlinux.com/download/",
+      "editions": [
+        {
+          "id": "core",
+          "name": "Core (no X)",
+          "versions": [
+            {
+              "version": "26.1",
+              "arch": "i386",
+              "iso": "antiX-26.1_386-core.iso",
+              "sha256": "5e07ed85acba1d2c33a7e41b089e80ce203eeb11d81af8c830e64e2e058ead7e",
+              "urls": [
+                "https://mirror.math.princeton.edu/pub/mxlinux-iso/ANTIX/Final/antiX-26.1/antiX-26.1_386-core.iso"
+              ]
+            },
+            {
+              "version": "26.1",
+              "arch": "amd64",
+              "iso": "antiX-26.1_x64-core.iso",
+              "sha256": "4f17a36c506a6771460545e18de6f5ea08f5664bca0e0bc285be52b41f5be762",
+              "urls": [
+                "https://mirror.math.princeton.edu/pub/mxlinux-iso/ANTIX/Final/antiX-26.1/antiX-26.1_x64-core.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "full",
+          "name": "Full",
+          "versions": [
+            {
+              "version": "26.1",
+              "arch": "i386",
+              "iso": "antiX-26.1_386-full.iso",
+              "sha256": "6ec6f6522c69b4411d32f61e853709cdaf94df709c264b2a4d7de9724ce57fbc",
+              "urls": [
+                "https://mirror.math.princeton.edu/pub/mxlinux-iso/ANTIX/Final/antiX-26.1/antiX-26.1_386-full.iso"
+              ]
+            },
+            {
+              "version": "26.1",
+              "arch": "amd64",
+              "iso": "antiX-26.1_x64-full.iso",
+              "sha256": "293381af0b7c48399abe015da8f67d41fd34372b73c4aafcf53747fbaed22371",
+              "urls": [
+                "https://mirror.math.princeton.edu/pub/mxlinux-iso/ANTIX/Final/antiX-26.1/antiX-26.1_x64-full.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cachyos",
+      "name": "CachyOS",
+      "site": "https://cachyos.org/download/",
+      "editions": [
+        {
+          "id": "desktop",
+          "name": "Desktop (online installer)",
+          "versions": [
+            {
+              "version": "260809",
+              "arch": "x86_64",
+              "iso": "cachyos-desktop-linux-260809.iso",
+              "sha256": "959f6577f45e25ee9fd8c220fd221b08e4ea79412c7315c0f922dd6d86d5e33c",
+              "urls": [
+                "https://mirror.cachyos.org/ISO/desktop/260809/cachyos-desktop-linux-260809.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deepin",
+      "name": "Deepin",
+      "site": "https://www.deepin.org/en/download/",
+      "editions": [
+        {
+          "id": "desktop",
+          "name": "Desktop Community",
+          "versions": [
+            {
+              "version": "25.2.0",
+              "arch": "amd64",
+              "iso": "deepin-desktop-community-25.2.0-amd64.iso",
+              "sha256": "f875c9a605bfe6a8425d1d353a3c1ec755bf37f5b0a3231ca19e2145da0ff450",
+              "urls": [
+                "https://cdimage.deepin.com/releases/25.2.0/amd64/deepin-desktop-community-25.2.0-amd64.iso"
+              ]
+            },
+            {
+              "version": "25.2.0",
+              "arch": "arm64",
+              "iso": "deepin-desktop-community-25.2.0-arm64.iso",
+              "sha256": "7c5cb76cec53532313f2b1f435d477a651f9b5f7ca2435dfc12eb7be8d3340fe",
+              "urls": [
+                "https://cdimage.deepin.com/releases/25.2.0/arm64/deepin-desktop-community-25.2.0-arm64.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asmi",
+      "name": "Asmi Linux",
+      "site": "https://teejeetech.com/asmi",
+      "editions": [
+        {
+          "id": "debian",
+          "name": "Debian-based (Xfce)",
+          "versions": [
+            {
+              "version": "13.6",
+              "arch": "amd64",
+              "iso": "asmi-linux-13.6-amd64.iso",
+              "sha256": "62624101ba0801a35d996fa048506fcd8b4d7d80b7ee25e8515b349b17352716",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-13.6-amd64.iso"
+              ]
+            },
+            {
+              "version": "13.5",
+              "arch": "amd64",
+              "iso": "asmi-linux-13.5-amd64.iso",
+              "sha256": "b3d87288147ad4fb128b632c5fe47e57b321dbdce342828072c725ce64eb35a8",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-13.5-amd64.iso"
+              ]
+            },
+            {
+              "version": "13.4",
+              "arch": "amd64",
+              "iso": "asmi-linux-13.4-amd64.iso",
+              "sha256": "ffd461245a9101661e2650f0fb43077992864ac1c85ca5175e3f649dac8797e8",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-13.4-amd64.iso"
+              ]
+            },
+            {
+              "version": "13.3",
+              "arch": "amd64",
+              "iso": "asmi-linux-13.3-amd64.iso",
+              "sha256": "59a09d1c5cf29982e513fd3c8c108ea786ba631b7cbc6dd10cf159597c71e833",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-13.3-amd64.iso"
+              ]
+            },
+            {
+              "version": "13.2",
+              "arch": "amd64",
+              "iso": "asmi-linux-13.2-amd64.iso",
+              "sha256": "fee224a330a74372262411b9e7850b9895d132c307f80f5420f62c5ef8ce0dbd",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-13.2-amd64.iso"
+              ]
+            },
+            {
+              "version": "13.1",
+              "arch": "amd64",
+              "iso": "asmi-linux-13.1-amd64.iso",
+              "sha256": "c1772b2f0d65082794584deb9a8452f7895f0fb91988c6370903e18e0dbb8f38",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-13.1-amd64.iso"
+              ]
+            },
+            {
+              "version": "13",
+              "arch": "amd64",
+              "iso": "asmi-linux-13-amd64.iso",
+              "sha256": "89d2727fb6c4a081934d8311d7e20579a3621d55cdaee0387d2beda8101c4a6c",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-13-amd64.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ubuntu",
+          "name": "Ubuntu-based (Xfce)",
+          "versions": [
+            {
+              "version": "26.04.1",
+              "arch": "amd64",
+              "iso": "asmi-linux-26.04.1-amd64.iso",
+              "sha256": "07784886aa5508c816034654426b2f94dad5666cfc2a76cf845938403d567aa1",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-26.04.1-amd64.iso"
+              ]
+            },
+            {
+              "version": "26.04",
+              "arch": "amd64",
+              "iso": "asmi-linux-26.04-amd64.iso",
+              "sha256": "138e0a1f8282ed1128718498640a709702a36beb6a6677aeca60378ccc6b2537",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-26.04-amd64.iso"
+              ]
+            },
+            {
+              "version": "25.10",
+              "arch": "amd64",
+              "iso": "asmi-linux-25.10-amd64.iso",
+              "sha256": "1a5b2bda034eebeff842720ab4951836e4dcbf47e1d0133554bbad7487310e54",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-25.10-amd64.iso"
+              ]
+            },
+            {
+              "version": "25.04",
+              "arch": "amd64",
+              "iso": "asmi-linux-25.04-amd64.iso",
+              "sha256": "9af1ad5518bab1d60e789e343c92cd5a6c671ded7bc424827acb9777a2e4b1d6",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-25.04-amd64.iso"
+              ]
+            },
+            {
+              "version": "24.04.5",
+              "arch": "amd64",
+              "iso": "asmi-linux-24.04.5-amd64.iso",
+              "sha256": "abd9b1af4545d0cc3bf449727c93d4aaab220897901c8dd84e69b76c9ec4ad3b",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-24.04.5-amd64.iso"
+              ]
+            },
+            {
+              "version": "24.04.4",
+              "arch": "amd64",
+              "iso": "asmi-linux-24.04.4-amd64.iso",
+              "sha256": "c32d987722e40f597b4417ffec8a9d585b3441a8808e90d6ce2fbd33b272a62a",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-24.04.4-amd64.iso"
+              ]
+            },
+            {
+              "version": "24.04.3",
+              "arch": "amd64",
+              "iso": "asmi-linux-24.04.3-amd64.iso",
+              "sha256": "fc782cb44119633e1e8bac06711fd83cbca9eb492b051316961426287af5db97",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-24.04.3-amd64.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "winux",
+      "name": "Winux (Wubuntu)",
+      "site": "https://www.winux.is/download/",
+      "editions": [
+        {
+          "id": "lts",
+          "name": "LTS (Windows-like)",
+          "versions": [
+            {
+              "version": "11.26.10",
+              "arch": "amd64",
+              "iso": "winux-11.26.10-noble-lts.iso",
+              "size": 6685507584,
+              "sha256": null,
+              "urls": [
+                "https://downloads.sourceforge.net/project/windows-linux/winux-11.26.10-noble-lts.iso",
+                "https://sourceforge.net/projects/windows-linux/files/winux-11.26.10-noble-lts.iso/download"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mx",
+      "name": "MX Linux",
+      "site": "https://mxlinux.org/download-links/",
+      "editions": [
+        {
+          "id": "xfce",
+          "name": "Xfce (flagship)",
+          "versions": [
+            {
+              "version": "25.3",
+              "arch": "amd64",
+              "iso": "MX-25.3_Xfce_x64.iso",
+              "urls": [
+                "https://mirror.math.princeton.edu/pub/mxlinux-iso/MX/Final/Xfce/MX-25.3_Xfce_x64.iso",
+                "https://downloads.sourceforge.net/project/mx-linux/MX/Final/Xfce/MX-25.3_Xfce_x64.iso"
+              ],
+              "sha256": "25b5ce20caeee1b0e50507291df5ac8a8211b1b9999d8dd7416da9b66ed9fbf9"
+            }
+          ]
+        },
+        {
+          "id": "kde",
+          "name": "KDE Plasma",
+          "versions": [
+            {
+              "version": "25.3",
+              "arch": "amd64",
+              "iso": "MX-25.3_KDE_x64.iso",
+              "urls": [
+                "https://mirror.math.princeton.edu/pub/mxlinux-iso/MX/Final/KDE/MX-25.3_KDE_x64.iso",
+                "https://downloads.sourceforge.net/project/mx-linux/MX/Final/KDE/MX-25.3_KDE_x64.iso"
+              ],
+              "sha256": "03cb49ebe8b1af0d630a622bddfc4d8cbefd256755663a49c1214933610ccc2a"
+            }
+          ]
+        },
+        {
+          "id": "fluxbox",
+          "name": "Fluxbox (lightweight)",
+          "versions": [
+            {
+              "version": "25.3",
+              "arch": "amd64",
+              "iso": "MX-25.3_fluxbox_x64.iso",
+              "urls": [
+                "https://mirror.math.princeton.edu/pub/mxlinux-iso/MX/Final/Fluxbox/MX-25.3_fluxbox_x64.iso",
+                "https://downloads.sourceforge.net/project/mx-linux/MX/Final/Fluxbox/MX-25.3_fluxbox_x64.iso"
+              ],
+              "sha256": "01f24095bc417fbf0edcaa0d0d8ef18bb75f5dfa53c525cc71adab4b8d41f51a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endeavouros",
+      "name": "EndeavourOS",
+      "site": "https://endeavouros.com/",
+      "editions": [
+        {
+          "id": "rolling",
+          "name": "Rolling ISO (monthly)",
+          "versions": [
+            {
+              "version": "2026.08.15",
+              "arch": "x86_64",
+              "iso": "EndeavourOS_Titan-Nova-2026.08.15.iso",
+              "urls": [
+                "https://mirror.moson.org/endeavouros/iso/EndeavourOS_Titan-Nova-2026.08.15.iso"
+              ],
+              "sha512": "3f83bd745e9d5d518bdf6fc9a24092fb5347da449a6e109c6572bf999097b8b548c4cf1848fdfb3c7c2823f558c3f5b51a127060d9c5b81b9ad89b4041bee7fa"
+            },
+            {
+              "version": "2026.04.27",
+              "arch": "x86_64",
+              "iso": "EndeavourOS_Titan-Neo-2026.04.27.iso",
+              "urls": [
+                "https://mirror.moson.org/endeavouros/iso/EndeavourOS_Titan-Neo-2026.04.27.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "garuda",
+      "name": "Garuda Linux",
+      "site": "https://garudalinux.org/downloads",
+      "editions": [
+        {
+          "id": "mokka",
+          "name": "Mokka (KDE)",
+          "versions": [
+            {
+              "version": "260822",
+              "arch": "x86_64",
+              "iso": "garuda-mokka-linux-garuda-260822.iso",
+              "urls": [
+                "https://iso.builds.garudalinux.org/iso/garuda/mokka/260822/garuda-mokka-linux-garuda-260822.iso"
+              ],
+              "sha256": "7f5587a96b281c50aaf45f1c102c06773a0344d67a2885abbc4c319e8d07ebd5"
+            }
+          ]
+        },
+        {
+          "id": "dr460nized",
+          "name": "Dr460nized (KDE gaming)",
+          "versions": [
+            {
+              "version": "261014",
+              "arch": "x86_64",
+              "iso": "garuda-dr460nized-linux-garuda-261014.iso",
+              "urls": [
+                "https://iso.builds.garudalinux.org/iso/garuda/dr460nized/261014/garuda-dr460nized-linux-garuda-261014.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gnome",
+          "name": "GNOME",
+          "versions": [
+            {
+              "version": "260819",
+              "arch": "x86_64",
+              "iso": "garuda-gnome-linux-garuda-260819.iso",
+              "urls": [
+                "https://iso.builds.garudalinux.org/iso/garuda/gnome/260819/garuda-gnome-linux-garuda-260819.iso"
+              ],
+              "sha256": "3660d518955494589d1bbedf0832a3ad3372dcbc658bd605c947f033430d2521"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manjaro",
+      "name": "Manjaro",
+      "site": "https://manjaro.org/download/",
+      "editions": [
+        {
+          "id": "kde",
+          "name": "KDE Plasma",
+          "versions": [
+            {
+              "version": "26.1.2",
+              "arch": "x86_64",
+              "iso": "manjaro-kde-26.1.2-260910-linux71.iso",
+              "urls": [
+                "https://download.manjaro.org/kde/26.1.2/manjaro-kde-26.1.2-260910-linux71.iso",
+                "https://downloads.sourceforge.net/project/manjarolinux/kde/26.1.2/manjaro-kde-26.1.2-260910-linux71.iso"
+              ],
+              "sha256": "e34870d576fd3c2ba46d27eaaa566cf81802088c8c24bee0c8424a115ac9dfa8"
+            }
+          ]
+        },
+        {
+          "id": "xfce",
+          "name": "Xfce",
+          "versions": [
+            {
+              "version": "26.1.2",
+              "arch": "x86_64",
+              "iso": "manjaro-xfce-26.1.2-260910-linux71.iso",
+              "urls": [
+                "https://download.manjaro.org/xfce/26.1.2/manjaro-xfce-26.1.2-260910-linux71.iso",
+                "https://downloads.sourceforge.net/project/manjarolinux/xfce/26.1.2/manjaro-xfce-26.1.2-260910-linux71.iso"
+              ],
+              "sha256": "9ec142e8cc8060db7447cdada1b0a5f309ce10f9342049bccaf2414e54211700"
+            }
+          ]
+        },
+        {
+          "id": "gnome",
+          "name": "GNOME",
+          "versions": [
+            {
+              "version": "26.1.2",
+              "arch": "x86_64",
+              "iso": "manjaro-gnome-26.1.2-260910-linux71.iso",
+              "urls": [
+                "https://download.manjaro.org/gnome/26.1.2/manjaro-gnome-26.1.2-260910-linux71.iso",
+                "https://downloads.sourceforge.net/project/manjarolinux/gnome/26.1.2/manjaro-gnome-26.1.2-260910-linux71.iso"
+              ],
+              "sha256": "e13b4bde6b10d46a311d10e4b680df68c43195555b938577912ca9a5a22306bd"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "artix",
+      "name": "Artix Linux",
+      "site": "https://artixlinux.org/download.php",
+      "editions": [
+        {
+          "id": "base",
+          "name": "Base (OpenRC)",
+          "versions": [
+            {
+              "version": "20261001",
+              "arch": "amd64",
+              "iso": "artix-base-openrc-20261001-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-base-openrc-20261001-x86_64.iso"
+              ]
+            },
+            {
+              "version": "20260813",
+              "arch": "amd64",
+              "iso": "artix-base-openrc-20260813-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-base-openrc-20260813-x86_64.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cinnamon",
+          "name": "Cinnamon (OpenRC)",
+          "versions": [
+            {
+              "version": "20261001",
+              "arch": "amd64",
+              "iso": "artix-cinnamon-openrc-20261001-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-cinnamon-openrc-20261001-x86_64.iso"
+              ]
+            },
+            {
+              "version": "20260814",
+              "arch": "amd64",
+              "iso": "artix-cinnamon-openrc-20260814-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-cinnamon-openrc-20260814-x86_64.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mate",
+          "name": "MATE (OpenRC)",
+          "versions": [
+            {
+              "version": "20261001",
+              "arch": "amd64",
+              "iso": "artix-mate-openrc-20261001-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-mate-openrc-20261001-x86_64.iso"
+              ]
+            },
+            {
+              "version": "20260813",
+              "arch": "amd64",
+              "iso": "artix-mate-openrc-20260813-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-mate-openrc-20260813-x86_64.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "plasma",
+          "name": "Plasma (OpenRC)",
+          "versions": [
+            {
+              "version": "20261001",
+              "arch": "amd64",
+              "iso": "artix-plasma-openrc-20261001-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-plasma-openrc-20261001-x86_64.iso"
+              ]
+            },
+            {
+              "version": "20260813",
+              "arch": "amd64",
+              "iso": "artix-plasma-openrc-20260813-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-plasma-openrc-20260813-x86_64.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "xfce",
+          "name": "Xfce (OpenRC)",
+          "versions": [
+            {
+              "version": "20261001",
+              "arch": "amd64",
+              "iso": "artix-xfce-openrc-20261001-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-xfce-openrc-20261001-x86_64.iso"
+              ]
+            },
+            {
+              "version": "20260813",
+              "arch": "amd64",
+              "iso": "artix-xfce-openrc-20260813-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-xfce-openrc-20260813-x86_64.iso"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gnome",
+          "name": "GNOME (OpenRC)",
+          "versions": [
+            {
+              "version": "20210427",
+              "arch": "amd64",
+              "iso": "artix-gnome-openrc-20210427-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-gnome-openrc-20210427-x86_64.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "void",
+      "name": "Void Linux",
+      "site": "https://voidlinux.org/download/",
+      "editions": [
+        {
+          "id": "base",
+          "name": "Base (no desktop)",
+          "versions": [
+            {
+              "version": "20250202",
+              "arch": "x86_64",
+              "iso": "void-live-x86_64-20250202-base.iso",
+              "urls": [
+                "https://repo-default.voidlinux.org/live/current/void-live-x86_64-20250202-base.iso"
+              ],
+              "sha256": "0f7439f500740f62dd18972cae448cec7d8a85032c7eb8f1bf946100d9a92161"
+            }
+          ]
+        },
+        {
+          "id": "xfce",
+          "name": "Xfce",
+          "versions": [
+            {
+              "version": "20250202",
+              "arch": "x86_64",
+              "iso": "void-live-x86_64-20250202-xfce.iso",
+              "urls": [
+                "https://repo-default.voidlinux.org/live/current/void-live-x86_64-20250202-xfce.iso"
+              ],
+              "sha256": "40ff378e6cbc74680b30eb0af0003af0abc750b2589f18d4733f9f30bcc79d5b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devuan",
+      "name": "Devuan",
+      "site": "https://www.devuan.org/get-devuan",
+      "editions": [
+        {
+          "id": "desktop-live",
+          "name": "Desktop Live (Daedalus)",
+          "versions": [
+            {
+              "version": "5.0.0",
+              "arch": "amd64",
+              "iso": "devuan_daedalus_5.0.0_amd64_desktop-live.iso",
+              "urls": [
+                "https://files.devuan.org/devuan_daedalus/desktop-live/devuan_daedalus_5.0.0_amd64_desktop-live.iso"
+              ],
+              "sha256": "87b9fec4d1e0cc9872c0f3fead82bfe03dc38af1f564ea43a1f7386414c2bdf8"
+            },
+            {
+              "version": "5.0.0",
+              "arch": "i386",
+              "iso": "devuan_daedalus_5.0.0_i386_desktop-live.iso",
+              "urls": [
+                "https://files.devuan.org/devuan_daedalus/desktop-live/devuan_daedalus_5.0.0_i386_desktop-live.iso"
+              ],
+              "sha256": "a8d354cbf8bc7137dad4734d508a2f3dcfe9d87132f01d4ae14955b6e770d86a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "almalinux",
+      "name": "AlmaLinux OS",
+      "site": "https://almalinux.org/get-linux/",
+      "editions": [
+        {
+          "id": "boot",
+          "name": "Boot (net installer)",
+          "versions": [
+            {
+              "version": "9.8",
+              "arch": "amd64",
+              "iso": "AlmaLinux-9.8-x86_64-boot.iso",
+              "urls": [
+                "https://repo.almalinux.org/almalinux/9/isos/x86_64/AlmaLinux-9.8-x86_64-boot.iso"
+              ],
+              "sha256": "445f99e24399bbe98aab86111d60751c142eda049d2444fd76da5eb03472e4ab",
+              "size": 1519271936
+            },
+            {
+              "version": "10.2",
+              "arch": "amd64",
+              "iso": "AlmaLinux-10.2-x86_64-boot.iso",
+              "urls": [
+                "https://repo.almalinux.org/almalinux/10/isos/x86_64/AlmaLinux-10.2-x86_64-boot.iso"
+              ],
+              "sha256": "b3f865468075bcada8f208d830289302c67529789d668041d24e8d6fc697ba6a",
+              "size": 1056202752
+            }
+          ]
+        },
+        {
+          "id": "dvd",
+          "name": "DVD (full)",
+          "versions": [
+            {
+              "version": "9.8",
+              "arch": "amd64",
+              "iso": "AlmaLinux-9.8-x86_64-dvd.iso",
+              "urls": [
+                "https://repo.almalinux.org/almalinux/9/isos/x86_64/AlmaLinux-9.8-x86_64-dvd.iso"
+              ],
+              "sha256": "7a392bdc879afd159b30da39a356b7b26c1ddf618b01549164da9aadbc40d814",
+              "size": 15151923200
+            },
+            {
+              "version": "10.2",
+              "arch": "amd64",
+              "iso": "AlmaLinux-10.2-x86_64-dvd.iso",
+              "urls": [
+                "https://repo.almalinux.org/almalinux/10/isos/x86_64/AlmaLinux-10.2-x86_64-dvd.iso"
+              ],
+              "sha256": "90244ac532f67c978831a381b420da8bda363729e1f4cf8fb8991daca70ee287",
+              "size": 10106372096
+            }
+          ]
+        },
+        {
+          "id": "minimal",
+          "name": "Minimal",
+          "versions": [
+            {
+              "version": "9.8",
+              "arch": "amd64",
+              "iso": "AlmaLinux-9.8-x86_64-minimal.iso",
+              "urls": [
+                "https://repo.almalinux.org/almalinux/9/isos/x86_64/AlmaLinux-9.8-x86_64-minimal.iso"
+              ],
+              "sha256": "7762a4b45a66235726db145a573658964bf77bf7b9bc1c018afe86a4cf37cc2e",
+              "size": 2838495232
+            },
+            {
+              "version": "10.2",
+              "arch": "amd64",
+              "iso": "AlmaLinux-10.2-x86_64-minimal.iso",
+              "urls": [
+                "https://repo.almalinux.org/almalinux/10/isos/x86_64/AlmaLinux-10.2-x86_64-minimal.iso"
+              ],
+              "sha256": "1b532f534231da0d1cd0ccae622bea6cd588d8a0d7b259f1f131501a6eed41a4",
+              "size": 1651376128
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parrot",
+      "name": "Parrot OS",
+      "site": "https://parrotsec.org/download/",
+      "editions": [
+        {
+          "id": "home",
+          "name": "Home",
+          "versions": [
+            {
+              "version": "7.4",
+              "arch": "amd64",
+              "iso": "Parrot-home-7.4_amd64.iso",
+              "urls": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-home-7.4_amd64.iso"
+              ],
+              "sha512": "a3267285b79227a170cb94fae348fda1c4ff33f76d0bf1d1e8995ce599c073d8669773f9e60c3ebad728efa335a36936e4b640008846ca1a71d3904d190c1600",
+              "torrents": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-home-7.4_amd64.iso.torrent"
+              ],
+              "sha256": "91fc24139e6adca1ea3f8e082f5f1df96a34d8d93eab65c196a7a69300b03ea4"
+            },
+            {
+              "version": "7.4",
+              "arch": "arm64",
+              "iso": "Parrot-home-7.4_arm64.iso",
+              "urls": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-home-7.4_arm64.iso"
+              ],
+              "sha512": "f82d335e9a48c1532ba8a6f8c03b643a57329c337fe7cd1255641448539e73f3a800e4fa7db1a4ffe706623d34f146f1172864cd6d58b9718af3b6b39976d5d7",
+              "torrents": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-home-7.4_arm64.iso.torrent"
+              ],
+              "sha256": "590929efab9849d827cda2bfffcec7edf97833b188915975006048339690037c"
+            }
+          ]
+        },
+        {
+          "id": "security",
+          "name": "Security",
+          "versions": [
+            {
+              "version": "7.4",
+              "arch": "amd64",
+              "iso": "Parrot-security-7.4_amd64.iso",
+              "urls": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-security-7.4_amd64.iso"
+              ],
+              "sha512": "cc85c85061aa5539afc865895c9a2354a709ca53e246264a71dc93eeb2eedaac17b9d548f25235655fefbc7c7e080398af061c041f8ba91d4ae43ddd163e931b",
+              "torrents": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-security-7.4_amd64.iso.torrent"
+              ],
+              "sha256": "ca241282068701f481d96487dcd1af788bd897cd586ceb38ee16f61e387aa291"
+            },
+            {
+              "version": "7.4",
+              "arch": "arm64",
+              "iso": "Parrot-security-7.4_arm64.iso",
+              "urls": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-security-7.4_arm64.iso"
+              ],
+              "sha512": "360ce510bc9120f8cfeedad4dbee3937dbbd67fe1d4f237e9b8491ff03114fb25de1b7495ce3243e125c65c65e32d372a9601a5150f0728083487e4255307083",
+              "torrents": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-security-7.4_arm64.iso.torrent"
+              ],
+              "sha256": "b0b717e8824f36f37b61c7dbb1733be7150434b6eb113051760e9aba30369577"
+            }
+          ]
+        },
+        {
+          "id": "security-tuned",
+          "name": "Security Tuned",
+          "versions": [
+            {
+              "version": "7.4",
+              "arch": "amd64",
+              "iso": "Parrot-security-tuned-7.4_amd64.iso",
+              "urls": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-security-tuned-7.4_amd64.iso"
+              ],
+              "sha512": "ad2a0db6ebd588664895f7aa246e729233ed39dbacdb7bd67db9f4e39a281d7e574a14ded8e0cf7fc09c380704a6516030f5238693fdf885ba72ce431e21c42d",
+              "torrents": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-security-tuned-7.4_amd64.iso.torrent"
+              ],
+              "sha256": "b4eaafafa6720cd57ed33fc8e913f69b9d6f018ee2a3cc58aa66c298be5aa9c8"
+            }
+          ]
+        },
+        {
+          "id": "spin-enlightenment",
+          "name": "Spin Enlightenment",
+          "versions": [
+            {
+              "version": "7.4",
+              "arch": "amd64",
+              "iso": "Parrot-spin-enlightenment-7.4_amd64.iso",
+              "urls": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-spin-enlightenment-7.4_amd64.iso"
+              ],
+              "sha512": "8520f07fa8cca0aca7f7c55fb871345d3c15e9b31f5982c8f3ef8b20f0142c777b357aed7fb2998cf93c7a5b237ae631c3d5de90101b2eb26bdff0701c0f67c5",
+              "torrents": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-spin-enlightenment-7.4_amd64.iso.torrent"
+              ],
+              "sha256": "ae8765e2caa955de53fb3e64413361cd09d6679ea7fb2f49c07168b2ee2c44cd"
+            }
+          ]
+        },
+        {
+          "id": "spin-htb",
+          "name": "Spin HTB",
+          "versions": [
+            {
+              "version": "7.4",
+              "arch": "amd64",
+              "iso": "Parrot-spin-htb-7.4_amd64.iso",
+              "urls": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-spin-htb-7.4_amd64.iso"
+              ],
+              "sha512": "a5ea426477c3301f91b72b4889f1bf2b26e99eb6a08ad92e503eca6bfedbc864b70f2088282becf489616f0dbe2ae1e5eae04b6e4472407c6bcb74c2110e4f6f",
+              "torrents": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-spin-htb-7.4_amd64.iso.torrent"
+              ],
+              "sha256": "723ef327dd17f9513b672b0a89db0664419a90317ba61e8b0a8d857354a0e8b9"
+            }
+          ]
+        },
+        {
+          "id": "spin-lxqt",
+          "name": "Spin LXQt",
+          "versions": [
+            {
+              "version": "7.4",
+              "arch": "amd64",
+              "iso": "Parrot-spin-lxqt-7.4_amd64.iso",
+              "urls": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-spin-lxqt-7.4_amd64.iso"
+              ],
+              "sha512": "79bf12bb1b00f0121b43b26c82ad978c23f3eff049b7099ab778e3a367c14d4cb115b24a83ea75028466782ce235dfcf0a86a60ac88552bf78bb70edc61a676c",
+              "torrents": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-spin-lxqt-7.4_amd64.iso.torrent"
+              ],
+              "sha256": "b720f110827988d786b9970360a92b7188fd2eb022482367d81d215793ce343c"
+            }
+          ]
+        },
+        {
+          "id": "spin-mate",
+          "name": "Spin MATE",
+          "versions": [
+            {
+              "version": "7.4",
+              "arch": "amd64",
+              "iso": "Parrot-spin-mate-7.4_amd64.iso",
+              "urls": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-spin-mate-7.4_amd64.iso"
+              ],
+              "sha512": "2dbbe88398a7e77d2918efa63d502dfa561707279e5f8e2f49513f8ac678decde3294486f0b3f87ee4f2caf30073e83a21e51f853e8d6beccab2ffb7782afcd1",
+              "torrents": [
+                "https://deb.parrot.sh/parrot/iso/7.4/Parrot-spin-mate-7.4_amd64.iso.torrent"
+              ],
+              "sha256": "57ae5527f2dc933616fe17b5b2a3b7936d65475b466de4cf1462bcb197618e32"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zorin",
+      "name": "Zorin OS",
+      "site": "https://zorin.com/os/download/",
+      "editions": [
+        {
+          "id": "core",
+          "name": "Core",
+          "versions": [
+            {
+              "version": "18.1",
+              "arch": "amd64",
+              "iso": "Zorin-OS-18.1-Core-64-bit.iso",
+              "urls": [
+                "https://mirror.kumi.systems/zorinos/18/Zorin-OS-18.1-Core-64-bit.iso",
+                "https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18.1-Core-64-bit.iso"
+              ],
+              "sha256": "44649b97bd307fc4c8529205d098ebbf98575a1e1ba2ee7d7005b697af1721d5"
+            },
+            {
+              "version": "18-r3",
+              "arch": "amd64",
+              "iso": "Zorin-OS-18-Core-64-bit-r3.iso",
+              "urls": [
+                "https://mirror.kumi.systems/zorinos/18/Zorin-OS-18-Core-64-bit-r3.iso",
+                "https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Core-64-bit-r3.iso"
+              ],
+              "sha256": "09959ce793b8a065b70207e46cd646b1de805fc7e0bad925ce28df6e04b7f807"
+            },
+            {
+              "version": "18-r2",
+              "arch": "amd64",
+              "iso": "Zorin-OS-18-Core-64-bit-r2.iso",
+              "urls": [
+                "https://mirror.kumi.systems/zorinos/18/Zorin-OS-18-Core-64-bit-r2.iso",
+                "https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Core-64-bit-r2.iso"
+              ],
+              "sha256": "934df8549b44f8d72db8348fddd1b08f99cdd46cfee8660206fa9ec814ace69d"
+            },
+            {
+              "version": "18-r1",
+              "arch": "amd64",
+              "iso": "Zorin-OS-18-Core-64-bit-r1.iso",
+              "urls": [
+                "https://mirror.kumi.systems/zorinos/18/Zorin-OS-18-Core-64-bit-r1.iso",
+                "https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Core-64-bit-r1.iso"
+              ],
+              "sha256": "b8e4e7de04448c5255420fed5f3bb22fa5a5e397d9ca1144da54a3310b3760b2"
+            },
+            {
+              "version": "18",
+              "arch": "amd64",
+              "iso": "Zorin-OS-18-Core-64-bit.iso",
+              "urls": [
+                "https://mirror.kumi.systems/zorinos/18/Zorin-OS-18-Core-64-bit.iso",
+                "https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Core-64-bit.iso"
+              ],
+              "sha256": "98666287ca5afae215def4804aca479bf3b439e028bc8f4e4d8ecddb6dd27339"
+            }
+          ]
+        },
+        {
+          "id": "education",
+          "name": "Education",
+          "versions": [
+            {
+              "version": "18.1",
+              "arch": "amd64",
+              "iso": "Zorin-OS-18.1-Education-64-bit.iso",
+              "urls": [
+                "https://mirror.kumi.systems/zorinos/18/Zorin-OS-18.1-Education-64-bit.iso",
+                "https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18.1-Education-64-bit.iso"
+              ],
+              "sha256": "f24b83bc1bf4f90618fb56e817fe3c1e67328e68720a8350131080db38bf9437"
+            },
+            {
+              "version": "18-r3",
+              "arch": "amd64",
+              "iso": "Zorin-OS-18-Education-64-bit-r3.iso",
+              "urls": [
+                "https://mirror.kumi.systems/zorinos/18/Zorin-OS-18-Education-64-bit-r3.iso",
+                "https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Education-64-bit-r3.iso"
+              ],
+              "sha256": "da9b2f4003c967aec86e859614dfa8e0f826148622dd8e1467656229464827f6"
+            },
+            {
+              "version": "18-r2",
+              "arch": "amd64",
+              "iso": "Zorin-OS-18-Education-64-bit-r2.iso",
+              "urls": [
+                "https://mirror.kumi.systems/zorinos/18/Zorin-OS-18-Education-64-bit-r2.iso",
+                "https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Education-64-bit-r2.iso"
+              ],
+              "sha256": "bffc80870e99ad95d23dc6903398adcc39549acfac729b53d975344723499c81"
+            },
+            {
+              "version": "18-r1",
+              "arch": "amd64",
+              "iso": "Zorin-OS-18-Education-64-bit-r1.iso",
+              "urls": [
+                "https://mirror.kumi.systems/zorinos/18/Zorin-OS-18-Education-64-bit-r1.iso",
+                "https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Education-64-bit-r1.iso"
+              ],
+              "sha256": "74ff02113608b0430576b5f08d181d9bf828b1be1760df760a18ce8e30e58300"
+            },
+            {
+              "version": "18",
+              "arch": "amd64",
+              "iso": "Zorin-OS-18-Education-64-bit.iso",
+              "urls": [
+                "https://mirror.kumi.systems/zorinos/18/Zorin-OS-18-Education-64-bit.iso",
+                "https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Education-64-bit.iso"
+              ],
+              "sha256": "0eb9c12166721e77c7a131e433ae8833fc2aa916104be615850795826f4cfc33"
+            }
+          ]
+        },
+        {
+          "id": "lite",
+          "name": "Lite (Xfce)",
+          "versions": [
+            {
+              "version": "18.1",
+              "arch": "amd64",
+              "iso": "Zorin-OS-18.1-Lite-64-bit.iso",
+              "urls": [
+                "https://mirror.kumi.systems/zorinos/18/Zorin-OS-18.1-Lite-64-bit.iso",
+                "https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18.1-Lite-64-bit.iso"
+              ],
+              "sha256": "b29ff7674cabb3d0698bdd0b39c1dbfc9def15f84d4a396de1ace1454c1e7a6d"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
