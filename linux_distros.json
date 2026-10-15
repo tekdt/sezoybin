@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-15T03:08:47Z",
+  "updated_utc": "2026-10-15T03:14:34Z",
   "source_repo": "https://github.com/tekdt/sezoybin",
   "note": "Data file for the SEZOY 'Linux Distro' download tab. SEZOY downloads urls[0] first and falls through to the next URL on failure. Run update_linux_distros.py to refresh automatically.",
   "distros": [
