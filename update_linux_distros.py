@@ -797,6 +797,178 @@ DISTRO_SPECS = [
              "edition": "fossapup64", "edition_name": "FossaPup64 (Ubuntu 20.04-based)"},
         ],
     },
+    {
+        "id": "linuxlite", "name": "Linux Lite",
+        "site": "https://www.linuxliteos.com/",
+        "kind": "sidecar",
+        "sha_suffix": ".sha256",
+        "torrent_probe": True,
+        "discover": {
+            "url": "https://mirror.clarkson.edu/linux-lite/isos/",
+            "dir_re": r'href="(\d+\.\d+)/"',
+            "try_desc": True,
+            "listing": "{url}{ver}/",
+            "mirrors": ["https://mirror.clarkson.edu/linux-lite/isos/{ver}/"],
+        },
+        "default_arch": "amd64",
+        "skip_re": r"(rc\d|beta)",
+        "rules": [
+            {"match": r"linux-lite-(?P<ver>\d+\.\d+)-64bit\.iso",
+             "edition": "desktop", "edition_name": "Desktop (Xfce)"},
+        ],
+    },
+    {
+        "id": "kdeneon", "name": "KDE neon",
+        "site": "https://neon.kde.org/download",
+        "kind": "sidecar",
+        "sha_suffix": ".sha256sum",
+        "torrent_probe": True,
+        "discover": {
+            "url": "https://files.kde.org/neon/images/desktop/user/",
+            "dir_re": r'href="(\d{8}-\d{4})/"',
+            "try_desc": True,
+            "listing": "{url}{ver}/",
+            "mirrors": ["https://files.kde.org/neon/images/desktop/user/{ver}/"],
+        },
+        "skip_re": "-current",
+        "default_arch": "amd64",
+        "rules": [
+            {"match": r"neon-user-desktop-(?P<ver>\d{8}-\d{4})\.iso",
+             "edition": "user", "edition_name": "User Edition (64-bit)"},
+        ],
+    },
+    {
+        "id": "solus", "name": "Solus",
+        "site": "https://getsol.us/download/",
+        "kind": "solus",
+        "rules": [
+            {"match": r"Solus-Budgie-Release-(?P<ver>[\d-]+)\.iso", "edition": "budgie", "edition_name": "Budgie Desktop"},
+            {"match": r"Solus-GNOME-Release-(?P<ver>[\d-]+)\.iso", "edition": "gnome", "edition_name": "GNOME Desktop"},
+            {"match": r"Solus-Plasma-Release-(?P<ver>[\d-]+)\.iso", "edition": "plasma", "edition_name": "KDE Plasma Desktop"},
+            {"match": r"Solus-Xfce-Release-(?P<ver>[\d-]+)\.iso", "edition": "xfce", "edition_name": "Xfce Desktop"},
+        ],
+    },
+    {
+        "id": "nobara", "name": "Nobara Linux",
+        "site": "https://nobaraproject.org/download-nobara/",
+        "kind": "nobara",
+        "rules": [
+            {"match": r"Nobara-(?P<ver>\d+)-Official-(?P<date>[\d-]+)\.iso",
+             "edition": "official", "edition_name": "Official (KDE Gaming Modified)"},
+            {"match": r"Nobara-(?P<ver>\d+)-GNOME-(?P<date>[\d-]+)\.iso",
+             "edition": "gnome", "edition_name": "GNOME Edition"},
+            {"match": r"Nobara-(?P<ver>\d+)-KDE-(?P<date>[\d-]+)\.iso",
+             "edition": "kde", "edition_name": "KDE Edition"},
+        ],
+    },
+    {
+        "id": "nixos", "name": "NixOS",
+        "site": "https://nixos.org/",
+        "kind": "nixos",
+        "channel": "nixos-24.11",
+    },
+    {
+        "id": "freebsd", "name": "FreeBSD",
+        "site": "https://www.freebsd.org/",
+        "kind": "sums",
+        "discover": {
+            "url": "https://download.freebsd.org/releases/ISO-IMAGES/",
+            "dir_re": r'href="(\d+\.\d+)/"',
+            "sums": "https://download.freebsd.org/releases/ISO-IMAGES/{ver}/CHECKSUM.SHA256-FreeBSD-{ver}-RELEASE-amd64",
+            "mirrors": ["https://download.freebsd.org/releases/ISO-IMAGES/{ver}/"],
+        },
+        "default_arch": "amd64",
+        "rules": [
+            {"match": r"FreeBSD-(?P<ver>[\d.]+)-RELEASE-amd64-disc1\.iso",
+             "edition": "disc1", "edition_name": "Installation Disc (amd64)"},
+        ],
+    },
+    {
+        "id": "gentoo", "name": "Gentoo Linux",
+        "site": "https://www.gentoo.org/",
+        "kind": "sidecar",
+        "sha_suffix": ".sha256",
+        "keep": 1,
+        "listings": [
+            {
+                "listing": "https://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/",
+                "mirrors": ["https://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/"],
+            }
+        ],
+        "default_arch": "amd64",
+        "rules": [
+            {"match": r"install-amd64-minimal-(?P<ver>[\w]+)\.iso",
+             "edition": "minimal", "edition_name": "Minimal Installation CD"},
+        ],
+    },
+    {
+        "id": "qubes", "name": "Qubes OS",
+        "site": "https://www.qubes-os.org/",
+        "kind": "sidecar",
+        "sha_suffix": [".DIGESTS", ".iso.DIGESTS"],
+        "keep": 2,
+        "listings": [
+            {
+                "listing": "https://mirrors.edge.kernel.org/qubes/iso/",
+                "mirrors": ["https://mirrors.edge.kernel.org/qubes/iso/"],
+            }
+        ],
+        "default_arch": "amd64",
+        "skip_re": r"(rc\d)",
+        "rules": [
+            {"match": r"Qubes-R(?P<ver>[\d.]+)-x86_64\.iso",
+             "edition": "standard", "edition_name": "Standard"},
+        ],
+    },
+    {
+        "id": "kaos", "name": "KaOS",
+        "site": "https://kaosx.us/",
+        "kind": "sourceforge",
+        "project": "kaosx",
+        "default_arch": "x86_64",
+        "rules": [
+            {"match": r"KaOS-(?P<ver>[\d.]+)-x86_64\.iso",
+             "edition": "standard", "edition_name": "Standard (KDE Plasma)"},
+        ],
+    },
+    {
+        "id": "slackware", "name": "Slackware",
+        "site": "http://www.slackware.com/",
+        "kind": "sidecar",
+        "sha_suffix": ".md5",
+        "listings": [
+            {
+                "listing": "https://slackware.uk/slackware/slackware-iso/slackware64-15.0-iso/",
+                "mirrors": ["https://slackware.uk/slackware/slackware-iso/slackware64-15.0-iso/"],
+            }
+        ],
+        "default_arch": "x86_64",
+        "rules": [
+            {"match": r"slackware64-(?P<ver>[\d.]+)-install-dvd\.iso",
+             "edition": "slackware64", "edition_name": "Slackware64 Install DVD"},
+        ],
+    },
+    {
+        "id": "gparted", "name": "GParted Live",
+        "site": "https://gparted.org/",
+        "kind": "sums",
+        "sources": [
+            {
+                "sums": "https://gparted.org/gparted-live/stable/CHECKSUMS.TXT",
+                "mirrors": ["https://downloads.sourceforge.net/gparted/"],
+            }
+        ],
+        "default_arch": "amd64",
+        "rules": [
+            {"match": r"gparted-live-(?P<ver>[\d.-]+)-amd64\.iso",
+             "edition": "live", "edition_name": "GParted Live"},
+        ],
+    },
+    {
+        "id": "systemrescue", "name": "SystemRescue",
+        "site": "https://www.system-rescue.org/Download/",
+        "kind": "systemrescue",
+    },
 ]
 
 SPECS = {s["id"]: s for s in DISTRO_SPECS}
@@ -1023,13 +1195,15 @@ def _probe_torrent(iso_url, timeout=20):
 
 
 def _hash_field(sha):
-    """('sha256'|'sha512', sha) by length; (None, None) if unusable."""
+    """('sha256'|'sha512'|'md5', sha) by length; (None, None) if unusable."""
     if not sha:
         return None, None
     if len(sha) == 64:
         return "sha256", sha
     if len(sha) == 128:
         return "sha512", sha
+    if len(sha) == 32:
+        return "md5", sha
     return None, None
 
 
@@ -1135,10 +1309,15 @@ def run_sums_spec(spec):
 def _sidecar_sha(sha_base, filename, suffix=".sha256"):
     """Fetch sibling checksum file, return (field, hash) or (None, None)."""
     suffixes = [suffix] if isinstance(suffix, str) else list(suffix)
+    candidates = []
     for s in suffixes:
+        candidates.append(filename + s)
+        if filename.endswith(".iso"):
+            candidates.append(filename[:-4] + s)
+    for c in candidates:
         try:
-            text = fetch_text(sha_base + filename + s)
-            m = re.search(r"([0-9a-fA-F]{128}|[0-9a-fA-F]{64})", text)
+            text = fetch_text(sha_base + c)
+            m = re.search(r"([0-9a-fA-F]{128}|[0-9a-fA-F]{64}|[0-9a-fA-F]{32})", text)
             if m:
                 return _hash_field(m.group(1).lower())
         except Exception:
@@ -1430,9 +1609,169 @@ def run_spec(spec):
         return run_tails_spec(spec)
     if spec["kind"] == "pop_os":
         return run_pop_os_spec(spec)
+    if spec["kind"] == "solus":
+        return run_solus_spec(spec)
+    if spec["kind"] == "nobara":
+        return run_nobara_spec(spec)
+    if spec["kind"] == "nixos":
+        return run_nixos_spec(spec)
+    if spec["kind"] == "systemrescue":
+        return run_systemrescue_spec(spec)
     if spec["kind"] == "manual":
         raise ValueError("manual distro, edit JSON by hand")
     raise ValueError("unknown kind: %s" % spec.get("kind"))
+
+
+def run_solus_spec(spec):
+    """Solus official download page -> latest edition ISOs + sha256sum sidecars."""
+    page = fetch_text(spec["site"])
+    iso_urls = sorted(set(re.findall(r'(https://downloads\.getsol\.us/isos/[\d-]+/Solus-[^&"\s]+\.iso)', page)))
+    by_edition = {}
+    for iso_url in iso_urls:
+        fn = iso_url.rsplit('/', 1)[-1]
+        sha_url = iso_url + ".sha256sum"
+        try:
+            sha_txt = fetch_text(sha_url)
+            m = re.search(r"([0-9a-fA-F]{64})", sha_txt)
+            sha256 = m.group(1).lower() if m else None
+        except Exception:
+            sha256 = None
+        for r in spec["rules"]:
+            rm = re.search(r["match"], fn)
+            if rm:
+                eid = r["edition"]
+                ename = r["edition_name"]
+                ver = rm.group("ver")
+                if eid not in by_edition:
+                    by_edition[eid] = {
+                        "id": eid,
+                        "name": ename,
+                        "versions": []
+                    }
+                item = {
+                    "version": ver,
+                    "arch": "amd64",
+                    "iso": fn,
+                    "urls": [iso_url],
+                }
+                if sha256:
+                    item["sha256"] = sha256
+                by_edition[eid]["versions"].append(item)
+                break
+    if not by_edition:
+        raise ValueError("no Solus ISOs parsed from " + spec["site"])
+    return list(by_edition.values())
+
+
+def run_nobara_spec(spec):
+    """Nobara official download page -> latest edition ISOs + sha256sum sidecars."""
+    page = fetch_text(spec["site"])
+    sha_urls = re.findall(r'href="([^"]+Nobara-[^"]+\.iso\.sha256sum)"', page)
+    by_edition = {}
+    for su in sha_urls:
+        filename = su.rsplit('/', 1)[-1].replace('.sha256sum', '')
+        iso_url = su.replace('.sha256sum', '')
+        try:
+            sha_txt = fetch_text(su)
+            m = re.search(r"([0-9a-fA-F]{64})", sha_txt)
+            sha256 = m.group(1).lower() if m else None
+        except Exception:
+            sha256 = None
+        for r in spec["rules"]:
+            rm = re.search(r["match"], filename)
+            if rm:
+                eid = r["edition"]
+                ename = r["edition_name"]
+                ver = rm.group("ver")
+                ver_full = f"{ver} ({rm.group('date')})" if "date" in rm.groupdict() else ver
+                if eid not in by_edition:
+                    by_edition[eid] = {
+                        "id": eid,
+                        "name": ename,
+                        "versions": []
+                    }
+                item = {
+                    "version": ver_full,
+                    "arch": "amd64",
+                    "iso": filename,
+                    "urls": [iso_url],
+                }
+                if sha256:
+                    item["sha256"] = sha256
+                by_edition[eid]["versions"].append(item)
+                break
+    if not by_edition:
+        raise ValueError("no Nobara ISOs found on " + spec["site"])
+    return list(by_edition.values())
+
+
+def run_nixos_spec(spec):
+    """NixOS official channels -> latest release ISOs + sha256."""
+    channel = spec.get("channel", "nixos-24.11")
+    editions = [
+        {"id": "gnome", "name": "GNOME (Graphical Installer)", "prefix": "latest-nixos-gnome-x86_64-linux.iso"},
+        {"id": "plasma", "name": "Plasma (KDE Graphical Installer)", "prefix": "latest-nixos-plasma6-x86_64-linux.iso"},
+        {"id": "minimal", "name": "Minimal Installation CD", "prefix": "latest-nixos-minimal-x86_64-linux.iso"},
+    ]
+    base_channel = f"https://channels.nixos.org/{channel}/"
+    res = []
+    for ed in editions:
+        sha_url = base_channel + ed["prefix"] + ".sha256"
+        iso_redirect_url = base_channel + ed["prefix"]
+        try:
+            sha_txt = fetch_text(sha_url)
+            m = re.search(r"([0-9a-fA-F]{64})", sha_txt)
+            sha256 = m.group(1).lower() if m else None
+            req = urllib.request.Request(iso_redirect_url, headers=UA, method="HEAD")
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                final_url = resp.geturl()
+            fn = final_url.rsplit("/", 1)[-1]
+            vm = re.search(r"nixos-(?:gnome|plasma\d*|minimal)-([\d.]+)\.", fn)
+            ver = vm.group(1) if vm else channel.replace("nixos-", "")
+            res.append({
+                "id": ed["id"],
+                "name": ed["name"],
+                "versions": [{
+                    "version": ver,
+                    "arch": "amd64",
+                    "iso": fn,
+                    "urls": [final_url],
+                    "sha256": sha256
+                }]
+            })
+        except Exception:
+            continue
+    if not res:
+        raise ValueError("failed to scrape any NixOS channel ISOs")
+    return res
+
+
+def run_systemrescue_spec(spec):
+    """SystemRescue official download page -> latest ISO + SHA256."""
+    page = fetch_text(spec["site"])
+    m = re.search(r'releases/([\d.]+)/(systemrescue-([\d.]+)-amd64\.iso)', page)
+    if not m:
+        raise ValueError("SystemRescue ISO not found on download page")
+    ver_dir, fn, ver = m.group(1), m.group(2), m.group(3)
+    sha_url = f"https://fastly-cdn.system-rescue.org/releases/{ver_dir}/{fn}.sha256"
+    iso_url = f"https://fastly-cdn.system-rescue.org/releases/{ver_dir}/{fn}"
+    sha_txt = fetch_text(sha_url)
+    sm = re.search(r"([0-9a-fA-F]{64})", sha_txt)
+    sha256 = sm.group(1).lower() if sm else None
+    return [{
+        "id": "standard",
+        "name": "Standard (amd64)",
+        "versions": [{
+            "version": ver,
+            "arch": "amd64",
+            "iso": fn,
+            "urls": [
+                iso_url,
+                f"https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/{ver_dir}/{fn}/download"
+            ],
+            "sha256": sha256
+        }]
+    }]
 
 
 # ---------------------------------------------------------------- main

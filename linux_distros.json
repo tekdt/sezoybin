@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-15T03:14:34Z",
+  "updated_utc": "2026-10-15T03:53:02Z",
   "source_repo": "https://github.com/tekdt/sezoybin",
   "note": "Data file for the SEZOY 'Linux Distro' download tab. SEZOY downloads urls[0] first and falls through to the next URL on failure. Run update_linux_distros.py to refresh automatically.",
   "distros": [
@@ -2236,6 +2236,394 @@
                 "https://distro.ibiblio.org/puppylinux/puppy-bookwormpup/BookwormPup64/10.0.12/BookwormPup64_10.0.12.iso"
               ],
               "sha256": "ae65f6e6d70a96f48bdbb291c2426f8a2fd77a73692e149e81a5eecb6fe7509f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "linuxlite",
+      "name": "Linux Lite",
+      "site": "https://www.linuxliteos.com/",
+      "editions": [
+        {
+          "id": "desktop",
+          "name": "Desktop (Xfce)",
+          "versions": [
+            {
+              "version": "8.0",
+              "arch": "amd64",
+              "iso": "linux-lite-8.0-64bit.iso",
+              "urls": [
+                "https://mirror.clarkson.edu/linux-lite/isos/8.0/linux-lite-8.0-64bit.iso"
+              ],
+              "sha256": "7cfc63baf597156a0a5ecac87e860aff3967279694b19fa67fb410a34802857e",
+              "torrents": [
+                "https://mirror.clarkson.edu/linux-lite/isos/8.0/linux-lite-8.0-64bit.iso.torrent"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kdeneon",
+      "name": "KDE neon",
+      "site": "https://neon.kde.org/download",
+      "editions": [
+        {
+          "id": "user",
+          "name": "User Edition (64-bit)",
+          "versions": [
+            {
+              "version": "20260903-0454",
+              "arch": "amd64",
+              "iso": "neon-user-desktop-20260903-0454.iso",
+              "urls": [
+                "https://files.kde.org/neon/images/desktop/user/20260903-0454/neon-user-desktop-20260903-0454.iso"
+              ],
+              "sha256": "61918b726ce3bf7b8523fef89174e8d80a384f0e3def2a358c81e3315e512bc9",
+              "torrents": [
+                "https://files.kde.org/neon/images/desktop/user/20260903-0454/neon-user-desktop-20260903-0454.iso.torrent"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "solus",
+      "name": "Solus",
+      "site": "https://getsol.us/download/",
+      "editions": [
+        {
+          "id": "budgie",
+          "name": "Budgie Desktop",
+          "versions": [
+            {
+              "version": "2026-04-18",
+              "arch": "amd64",
+              "iso": "Solus-Budgie-Release-2026-04-18.iso",
+              "urls": [
+                "https://downloads.getsol.us/isos/2026-04-18/Solus-Budgie-Release-2026-04-18.iso"
+              ],
+              "sha256": "b99324e51d20d029f35932770a7d0f43dad64dc9bca11ec34a6b83cea603b579"
+            }
+          ]
+        },
+        {
+          "id": "gnome",
+          "name": "GNOME Desktop",
+          "versions": [
+            {
+              "version": "2026-04-18",
+              "arch": "amd64",
+              "iso": "Solus-GNOME-Release-2026-04-18.iso",
+              "urls": [
+                "https://downloads.getsol.us/isos/2026-04-18/Solus-GNOME-Release-2026-04-18.iso"
+              ],
+              "sha256": "059c6718b461775efb67e21d19d3dc13fcead0b43691e9787e704fbfbe61841c"
+            }
+          ]
+        },
+        {
+          "id": "plasma",
+          "name": "KDE Plasma Desktop",
+          "versions": [
+            {
+              "version": "2026-04-18",
+              "arch": "amd64",
+              "iso": "Solus-Plasma-Release-2026-04-18.iso",
+              "urls": [
+                "https://downloads.getsol.us/isos/2026-04-18/Solus-Plasma-Release-2026-04-18.iso"
+              ],
+              "sha256": "446975fead7202c3e6d748b1833a62b79fedef26c7a96ca76a848bcc5551ed63"
+            }
+          ]
+        },
+        {
+          "id": "xfce",
+          "name": "Xfce Desktop",
+          "versions": [
+            {
+              "version": "2026-04-18",
+              "arch": "amd64",
+              "iso": "Solus-Xfce-Release-2026-04-18.iso",
+              "urls": [
+                "https://downloads.getsol.us/isos/2026-04-18/Solus-Xfce-Release-2026-04-18.iso"
+              ],
+              "sha256": "a3085fa5c0171420e46e1554191fffe66e50dbea70c37e9d6cc4ec79fb557895"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nobara",
+      "name": "Nobara Linux",
+      "site": "https://nobaraproject.org/download-nobara/",
+      "editions": [
+        {
+          "id": "official",
+          "name": "Official (KDE Gaming Modified)",
+          "versions": [
+            {
+              "version": "44 (2026-10-13)",
+              "arch": "amd64",
+              "iso": "Nobara-44-Official-2026-10-13.iso",
+              "urls": [
+                "https://nobara-images.nobaraproject.org/Nobara-44-Official-2026-10-13.iso"
+              ],
+              "sha256": "1eedf22cbfdd245b0ad08120b9bf4123910eff42ca9fede054542f99356ea995"
+            }
+          ]
+        },
+        {
+          "id": "gnome",
+          "name": "GNOME Edition",
+          "versions": [
+            {
+              "version": "44 (2026-10-13)",
+              "arch": "amd64",
+              "iso": "Nobara-44-GNOME-2026-10-13.iso",
+              "urls": [
+                "https://nobara-images.nobaraproject.org/Nobara-44-GNOME-2026-10-13.iso"
+              ],
+              "sha256": "47087299d03ecedd67fd3fc6d69803118991caeb26faace9f39429f14ffdb2fd"
+            }
+          ]
+        },
+        {
+          "id": "kde",
+          "name": "KDE Edition",
+          "versions": [
+            {
+              "version": "44 (2026-10-13)",
+              "arch": "amd64",
+              "iso": "Nobara-44-KDE-2026-10-13.iso",
+              "urls": [
+                "https://nobara-images.nobaraproject.org/Nobara-44-KDE-2026-10-13.iso"
+              ],
+              "sha256": "9f5f7c126f71d2c79fa410cd14a72f103e9575ee94688d43926195c5d1e6e36b"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nixos",
+      "name": "NixOS",
+      "site": "https://nixos.org/",
+      "editions": [
+        {
+          "id": "gnome",
+          "name": "GNOME (Graphical Installer)",
+          "versions": [
+            {
+              "version": "24.11.719113",
+              "arch": "amd64",
+              "iso": "nixos-gnome-24.11.719113.50ab793786d9-x86_64-linux.iso",
+              "urls": [
+                "https://releases.nixos.org/nixos/24.11/nixos-24.11.719113.50ab793786d9/nixos-gnome-24.11.719113.50ab793786d9-x86_64-linux.iso"
+              ],
+              "sha256": "8cbc671cb7148ce05145b9d53ffbbe13bf4b425092474fb5a48d71deb9a44c93"
+            }
+          ]
+        },
+        {
+          "id": "plasma",
+          "name": "Plasma (KDE Graphical Installer)",
+          "versions": [
+            {
+              "version": "24.11.719113",
+              "arch": "amd64",
+              "iso": "nixos-plasma6-24.11.719113.50ab793786d9-x86_64-linux.iso",
+              "urls": [
+                "https://releases.nixos.org/nixos/24.11/nixos-24.11.719113.50ab793786d9/nixos-plasma6-24.11.719113.50ab793786d9-x86_64-linux.iso"
+              ],
+              "sha256": "a8d8325715548be808aab69ac2d499ad2db9bacd5cba0a8bd0d5890a090a77b9"
+            }
+          ]
+        },
+        {
+          "id": "minimal",
+          "name": "Minimal Installation CD",
+          "versions": [
+            {
+              "version": "24.11.719113",
+              "arch": "amd64",
+              "iso": "nixos-minimal-24.11.719113.50ab793786d9-x86_64-linux.iso",
+              "urls": [
+                "https://releases.nixos.org/nixos/24.11/nixos-24.11.719113.50ab793786d9/nixos-minimal-24.11.719113.50ab793786d9-x86_64-linux.iso"
+              ],
+              "sha256": "acdcf8239f64e5acd20cf49c63f83e4c1b823b31d9f669033b48876b29b52177"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "freebsd",
+      "name": "FreeBSD",
+      "site": "https://www.freebsd.org/",
+      "editions": [
+        {
+          "id": "disc1",
+          "name": "Installation Disc (amd64)",
+          "versions": [
+            {
+              "version": "15.1",
+              "arch": "amd64",
+              "iso": "FreeBSD-15.1-RELEASE-amd64-disc1.iso",
+              "urls": [
+                "https://download.freebsd.org/releases/ISO-IMAGES/15.1/FreeBSD-15.1-RELEASE-amd64-disc1.iso"
+              ],
+              "sha256": "fa27646f05a1440fd26ffbb85e06a50bc86e128242a4e9cb7bb3ea76e1aa5fd9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gentoo",
+      "name": "Gentoo Linux",
+      "site": "https://www.gentoo.org/",
+      "editions": [
+        {
+          "id": "minimal",
+          "name": "Minimal Installation CD",
+          "versions": [
+            {
+              "version": "20261011T170049Z",
+              "arch": "amd64",
+              "iso": "install-amd64-minimal-20261011T170049Z.iso",
+              "urls": [
+                "https://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-20261011T170049Z.iso"
+              ],
+              "sha256": "787d6743e1c2200e8d86f602343a344a2c1f04bc0041c1fcff6c0c34b0b8ec11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "qubes",
+      "name": "Qubes OS",
+      "site": "https://www.qubes-os.org/",
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Standard",
+          "versions": [
+            {
+              "version": "4.3.2",
+              "arch": "amd64",
+              "iso": "Qubes-R4.3.2-x86_64.iso",
+              "urls": [
+                "https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.2-x86_64.iso"
+              ],
+              "sha256": "13bc750b4635939acf68e37994c57e200e2a0035e6ad43fc917d239fdc726776"
+            },
+            {
+              "version": "4.3.1",
+              "arch": "amd64",
+              "iso": "Qubes-R4.3.1-x86_64.iso",
+              "urls": [
+                "https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.1-x86_64.iso"
+              ],
+              "sha256": "6ab99dee2c7a7b2c32053d3531084aaf3af703815842b67f90a87ba324527db6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kaos",
+      "name": "KaOS",
+      "site": "https://kaosx.us/",
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Standard (KDE Plasma)",
+          "versions": [
+            {
+              "version": "2026.09",
+              "arch": "x86_64",
+              "iso": "ISO/KaOS-2026.09-x86_64.iso",
+              "size": 4461391872,
+              "sha256": "2db97d2ed70db995b2b40d40f22ce4af804c1bcdede4ce72f7f889f579886a50",
+              "urls": [
+                "https://downloads.sourceforge.net/project/kaosx/ISO/KaOS-2026.09-x86_64.iso",
+                "https://sourceforge.net/projects/kaosx/files/ISO/KaOS-2026.09-x86_64.iso/download"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slackware",
+      "name": "Slackware",
+      "site": "http://www.slackware.com/",
+      "editions": [
+        {
+          "id": "slackware64",
+          "name": "Slackware64 Install DVD",
+          "versions": [
+            {
+              "version": "15.0",
+              "arch": "x86_64",
+              "iso": "slackware64-15.0-install-dvd.iso",
+              "urls": [
+                "https://slackware.uk/slackware/slackware-iso/slackware64-15.0-iso/slackware64-15.0-install-dvd.iso"
+              ],
+              "md5": "f8418ef0ec2c0a205adf5dbc2f2a1971"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gparted",
+      "name": "GParted Live",
+      "site": "https://gparted.org/",
+      "editions": [
+        {
+          "id": "live",
+          "name": "GParted Live",
+          "versions": [
+            {
+              "version": "1.8.1-6",
+              "arch": "amd64",
+              "iso": "gparted-live-1.8.1-6-amd64.iso",
+              "urls": [
+                "https://downloads.sourceforge.net/gparted/gparted-live-1.8.1-6-amd64.iso"
+              ],
+              "sha256": "d789c38779f0d6f7026c12f44c2c52a04f66e28a1aea7d51f3045ad1bbf28411",
+              "sha512": "6931ad0f886e8155e5ae25b795167039e4687d0cde952fd561e75bd3990e2fa4b8732a0f8ec83b9d982f8d90baff592093ff2eb612bb91fdde5e45962db440c6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "systemrescue",
+      "name": "SystemRescue",
+      "site": "https://www.system-rescue.org/Download/",
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Standard (amd64)",
+          "versions": [
+            {
+              "version": "13.02",
+              "arch": "amd64",
+              "iso": "systemrescue-13.02-amd64.iso",
+              "urls": [
+                "https://fastly-cdn.system-rescue.org/releases/13.02/systemrescue-13.02-amd64.iso",
+                "https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/13.02/systemrescue-13.02-amd64.iso/download"
+              ],
+              "sha256": "ad4d670b72859d887c7960142a9a9d36a3e50446694a035e254442f65d6e7572"
             }
           ]
         }
