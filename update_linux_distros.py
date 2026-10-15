@@ -14,13 +14,15 @@ HOW TO ADD A NEW DISTRO YOURSELF (no new code for standard layouts):
      with versions/editions/urls filled in from the scrape.
   3. Pick the kind that matches the distro's download layout:
      - "sums": a SHA256SUMS-style "hash  filename" file next to the ISOs
-       (Ubuntu + flavors, Debian, Kali, Arch, Mint, Deepin, Asmi).
+       (Ubuntu + flavors, Debian, Kali, Arch, Mint, Deepin, Asmi, Rocky, CentOS Stream).
      - "sidecar": a directory listing where each ISO has a sibling
-       .sha256 file (openSUSE, antiX, CachyOS). Supports version-dir
+       .sha256 file (openSUSE, antiX, CachyOS, Alpine, Mageia). Supports version-dir
        discovery for rolling releases (Tumbleweed snapshots).
      - "sourceforge": projects hosted on SourceForge (uses their
-       best_release.json API, e.g. Winux).
+       best_release.json API, e.g. Winux, Q4OS, Bodhi Linux, SparkyLinux).
      - "fedora": Fedora's release-dir tree.
+     - "tails": Tails official JSON release API.
+     - "pop_os": Pop!_OS release page scraping.
      - "manual": anything exotic (email-gated downloads like Slax):
        the updater never touches it; edit the JSON entry by hand.
 
@@ -567,6 +569,201 @@ DISTRO_SPECS = [
             ("server-dvd", "Server DVD", "Server"),
         ],
     },
+    {
+        "id": "rocky", "name": "Rocky Linux",
+        "site": "https://rockylinux.org/download",
+        "kind": "sums",
+        "skip_re": r"-latest-",
+        "sources": [
+            {"sums": "https://download.rockylinux.org/pub/rocky/9/isos/x86_64/CHECKSUM",
+             "mirrors": ["https://download.rockylinux.org/pub/rocky/9/isos/x86_64/"]},
+            {"sums": "https://download.rockylinux.org/pub/rocky/10/isos/x86_64/CHECKSUM",
+             "mirrors": ["https://download.rockylinux.org/pub/rocky/10/isos/x86_64/"]},
+        ],
+        "rules": [
+            {"match": r"Rocky-(?P<ver>\d+\.\d+)-x86_64-(?P<ed>dvd1?|boot|minimal)\.iso",
+             "edition_from": "ed", "edition_name": "",
+             "edition": "", "edition_map": {"dvd": "dvd", "dvd1": "dvd", "boot": "boot", "minimal": "minimal"}},
+        ],
+        "edition_names": {"dvd": "DVD (full)", "boot": "Boot (net installer)",
+                          "minimal": "Minimal"},
+    },
+    {
+        "id": "centos-stream", "name": "CentOS Stream",
+        "site": "https://www.centos.org/download/",
+        "kind": "sums",
+        "skip_re": r"-latest-",
+        "sources": [
+            {"sums": "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/SHA256SUM",
+             "mirrors": ["https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/"]},
+            {"sums": "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/iso/SHA256SUM",
+             "mirrors": ["https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/iso/"]},
+        ],
+        "rules": [
+            {"match": r"CentOS-Stream-(?P<ver>\d+-\d{8}\.\d+)-x86_64-(?P<ed>dvd1?|boot)\.iso",
+             "edition_from": "ed", "edition_name": "",
+             "edition": "", "edition_map": {"dvd": "dvd", "dvd1": "dvd", "boot": "boot"}},
+        ],
+        "edition_names": {"dvd": "DVD (full)", "boot": "Boot (net installer)"},
+    },
+    {
+        "id": "alpine", "name": "Alpine Linux",
+        "site": "https://alpinelinux.org/downloads/",
+        "kind": "sidecar",
+        "listings": [
+            {"listing": "https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/",
+             "mirrors": ["https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/"]},
+        ],
+        "skip_re": r"(_rc\d|-xen|-virt)",
+        "dedupe": "max-iso",
+        "default_arch": "x86_64",
+        "rules": [
+            {"match": r"alpine-(?P<ed>standard|extended)-(?P<ver>[\d.]+)-x86_64\.iso",
+             "edition_from": "ed",
+             "edition_map": {"standard": "standard", "extended": "extended"}},
+        ],
+        "edition_names": {"standard": "Standard (console only)",
+                          "extended": "Extended (extra packages)"},
+    },
+    {
+        "id": "pop-os", "name": "Pop!_OS",
+        "site": "https://system76.com/pop/",
+        "kind": "pop_os",
+        "url": "https://system76.com/pop/download/",
+    },
+    {
+        "id": "tails", "name": "Tails",
+        "site": "https://tails.net/",
+        "kind": "tails",
+        "api": "https://tails.net/install/v2/Tails/amd64/stable/latest.json",
+        "mirror_base": "https://mirrors.edge.kernel.org/tails/stable/",
+    },
+    {
+        "id": "ubuntu-mate", "name": "Ubuntu MATE",
+        "site": "https://ubuntu-mate.org/download/",
+        "kind": "sums",
+        "sources": [
+            {"sums": "https://cdimage.ubuntu.com/ubuntu-mate/releases/24.04/release/SHA256SUMS",
+             "mirrors": ["https://cdimage.ubuntu.com/ubuntu-mate/releases/24.04/release/"]},
+        ],
+        "rules": [
+            {"match": r"ubuntu-mate-(?P<ver>\d+\.\d+(?:\.\d+)?)-desktop-(?P<arch>amd64|arm64)\.iso",
+             "edition": "desktop-lts", "edition_name": "Desktop LTS (MATE)"},
+        ],
+    },
+    {
+        "id": "ubuntu-budgie", "name": "Ubuntu Budgie",
+        "site": "https://ubuntubudgie.org/downloads/",
+        "kind": "sums",
+        "sources": [
+            {"sums": "https://cdimage.ubuntu.com/ubuntu-budgie/releases/24.04/release/SHA256SUMS",
+             "mirrors": ["https://cdimage.ubuntu.com/ubuntu-budgie/releases/24.04/release/"]},
+        ],
+        "rules": [
+            {"match": r"ubuntu-budgie-(?P<ver>\d+\.\d+(?:\.\d+)?)-desktop-(?P<arch>amd64|arm64)\.iso",
+             "edition": "desktop-lts", "edition_name": "Desktop LTS (Budgie)"},
+        ],
+    },
+    {
+        "id": "ubuntustudio", "name": "Ubuntu Studio",
+        "site": "https://ubuntustudio.org/download/",
+        "kind": "sums",
+        "sources": [
+            {"sums": "https://cdimage.ubuntu.com/ubuntustudio/releases/24.04/release/SHA256SUMS",
+             "mirrors": ["https://cdimage.ubuntu.com/ubuntustudio/releases/24.04/release/"]},
+        ],
+        "rules": [
+            {"match": r"ubuntustudio-(?P<ver>\d+\.\d+(?:\.\d+)?)-dvd-(?P<arch>amd64)\.iso",
+             "edition": "dvd-lts", "edition_name": "DVD LTS (Creative Suite)"},
+        ],
+    },
+    {
+        "id": "ubuntukylin", "name": "Ubuntu Kylin",
+        "site": "https://www.ubuntukylin.com/downloads/",
+        "kind": "sums",
+        "sources": [
+            {"sums": "https://cdimage.ubuntu.com/ubuntukylin/releases/24.04/release/SHA256SUMS",
+             "mirrors": ["https://cdimage.ubuntu.com/ubuntukylin/releases/24.04/release/"]},
+        ],
+        "rules": [
+            {"match": r"ubuntukylin-(?P<ver>\d+\.\d+(?:\.\d+)?)-desktop-(?P<arch>amd64)\.iso",
+             "edition": "desktop-lts", "edition_name": "Desktop LTS (UKUI)"},
+        ],
+    },
+    {
+        "id": "edubuntu", "name": "Edubuntu",
+        "site": "https://www.edubuntu.org/download",
+        "kind": "sums",
+        "sources": [
+            {"sums": "https://cdimage.ubuntu.com/edubuntu/releases/24.04/release/SHA256SUMS",
+             "mirrors": ["https://cdimage.ubuntu.com/edubuntu/releases/24.04/release/"]},
+        ],
+        "rules": [
+            {"match": r"edubuntu-(?P<ver>\d+\.\d+(?:\.\d+)?)-desktop-(?P<arch>amd64)\.iso",
+             "edition": "desktop-lts", "edition_name": "Desktop LTS (Education)"},
+        ],
+    },
+    {
+        "id": "mageia", "name": "Mageia",
+        "site": "https://www.mageia.org/en/downloads/",
+        "kind": "sidecar",
+        "sha_suffix": ".sha512",
+        "discovers": [
+            {"url": "https://mirrors.kernel.org/mageia/iso/",
+             "dir_re": r'href="(\d+)/"',
+             "file_page": "{url}{ver}/Mageia-{ver}-Live-GNOME-x86_64/",
+             "mirrors": ["https://mirrors.kernel.org/mageia/iso/{ver}/Mageia-{ver}-Live-GNOME-x86_64/"],
+             "edition": "gnome", "edition_name": "GNOME Live"},
+            {"url": "https://mirrors.kernel.org/mageia/iso/",
+             "dir_re": r'href="(\d+)/"',
+             "file_page": "{url}{ver}/Mageia-{ver}-Live-Plasma-x86_64/",
+             "mirrors": ["https://mirrors.kernel.org/mageia/iso/{ver}/Mageia-{ver}-Live-Plasma-x86_64/"],
+             "edition": "plasma", "edition_name": "Plasma Live"},
+            {"url": "https://mirrors.kernel.org/mageia/iso/",
+             "dir_re": r'href="(\d+)/"',
+             "file_page": "{url}{ver}/Mageia-{ver}-Live-Xfce-x86_64/",
+             "mirrors": ["https://mirrors.kernel.org/mageia/iso/{ver}/Mageia-{ver}-Live-Xfce-x86_64/"],
+             "edition": "xfce", "edition_name": "Xfce Live"},
+        ],
+        "default_arch": "x86_64",
+        "rules": [
+            {"match": r"Mageia-(?P<ver>\d+)-Live-(?:GNOME|Plasma|Xfce)-x86_64\.iso",
+             "edition": "x", "edition_name": "x"},
+        ],
+    },
+    {
+        "id": "q4os", "name": "Q4OS",
+        "site": "https://q4os.org/downloads1.html",
+        "kind": "sourceforge",
+        "project": "q4os",
+        "default_arch": "amd64",
+        "rules": [
+            {"match": r"q4os-(?P<ver>[\d.]+)-x64(?P<rev>\.r\d+)?\.iso",
+             "edition": "desktop", "edition_name": "Desktop Edition"},
+        ],
+    },
+    {
+        "id": "bodhilinux", "name": "Bodhi Linux",
+        "site": "https://www.bodhilinux.com/download/",
+        "kind": "sourceforge",
+        "project": "bodhilinux",
+        "default_arch": "amd64",
+        "rules": [
+            {"match": r"bodhi-(?P<ver>[\d.]+)-64\.iso",
+             "edition": "standard", "edition_name": "Standard (Moksha Desktop)"},
+        ],
+    },
+    {
+        "id": "sparkylinux", "name": "SparkyLinux",
+        "site": "https://sparkylinux.org/download/",
+        "kind": "sourceforge",
+        "project": "sparkylinux",
+        "default_arch": "x86_64",
+        "rules": [
+            {"match": r"sparkylinux-(?P<ver>[\d.]+)-x86_64-(?P<ed>minimalgui[a-z-]*)\.iso",
+             "edition": "minimalgui", "edition_name": "MinimalGUI"},
+        ],
+    },
 ]
 
 SPECS = {s["id"]: s for s in DISTRO_SPECS}
@@ -1064,9 +1261,73 @@ def run_sourceforge_spec(spec):
     return [{"id": hit["edition"], "name": hit["edition_name"], "versions": [{
         "version": hit["version"], "arch": hit["arch"], "iso": filename,
         "size": info.get("bytes"),
-        "sha256": None,
+        "sha256": info.get("sha256sum"),
         "urls": [base1 + filename, base2 + filename + "/download"],
     }]}]
+
+
+def run_tails_spec(spec):
+    """Tails official JSON API -> latest release info + SHA256."""
+    data = json.loads(fetch_text(spec["api"]))
+    inst = data["installations"][0]
+    ver = inst["version"]
+    iso_info = None
+    for p in inst.get("installation-paths", []):
+        if p.get("type") == "iso":
+            iso_info = p["target-files"][0]
+            break
+    if not iso_info:
+        raise ValueError("no ISO target found in Tails API")
+    url = iso_info["url"]
+    filename = url.split("/")[-1]
+    mirrors = [url]
+    if spec.get("mirror_base"):
+        mirrors.append(spec["mirror_base"] + filename)
+    return [{
+        "id": "live",
+        "name": "Live (Amnesic Incognito)",
+        "versions": [{
+            "version": ver,
+            "arch": "amd64",
+            "iso": filename,
+            "size": iso_info.get("size"),
+            "sha256": iso_info.get("sha256"),
+            "urls": mirrors,
+        }]
+    }]
+
+
+def run_pop_os_spec(spec):
+    """Pop!_OS download page -> ISO download URLs + SHA256 sums."""
+    html = fetch_text(spec["url"])
+    editions = []
+    pattern = r'href=[\x22\x27](https://iso\.pop-os\.org/(?P<path>(?P<ver>\d+\.\d+)/(?P<arch>[^/]+)/(?P<ed>intel|nvidia)/[^/]+/(?P<filename>[^\x22\x27]+\.iso)))[\x22\x27]'
+    seen_editions = set()
+    for m in re.finditer(pattern, html):
+        d = m.groupdict()
+        ed = d["ed"]
+        if ed in seen_editions:
+            continue
+        seen_editions.add(ed)
+        start = max(0, m.start() - 600)
+        end = min(len(html), m.end() + 600)
+        shas = re.findall(r"([0-9a-fA-F]{64})", html[start:end])
+        sha = shas[0].lower() if shas else None
+        ename = "Intel / AMD Graphics" if ed == "intel" else "NVIDIA Graphics"
+        editions.append({
+            "id": ed,
+            "name": ename,
+            "versions": [{
+                "version": d["ver"],
+                "arch": d["arch"],
+                "iso": d["filename"],
+                "urls": [m.group(1)],
+                "sha256": sha,
+            }]
+        })
+    if not editions:
+        raise ValueError("no Pop!_OS ISOs found on " + spec["url"])
+    return editions
 
 
 def run_fedora_spec(spec):
@@ -1113,6 +1374,10 @@ def run_spec(spec):
         return run_sourceforge_spec(spec)
     if spec["kind"] == "fedora":
         return run_fedora_spec(spec)
+    if spec["kind"] == "tails":
+        return run_tails_spec(spec)
+    if spec["kind"] == "pop_os":
+        return run_pop_os_spec(spec)
     if spec["kind"] == "manual":
         raise ValueError("manual distro, edit JSON by hand")
     raise ValueError("unknown kind: %s" % spec.get("kind"))

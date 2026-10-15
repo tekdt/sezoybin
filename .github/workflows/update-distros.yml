@@ -1,0 +1,60 @@
+name: Update Linux Distros
+
+on:
+  schedule:
+    # Runs automatically every Sunday at 00:00 UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+    inputs:
+      distro:
+        description: 'Distro ID to update (leave blank to update all)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  update-distros:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate JSON before run
+        run: python update_linux_distros.py --check
+
+      - name: Run distro updater script
+        id: updater
+        run: |
+          if [ -n "${{ github.event.inputs.distro }}" ]; then
+            echo "Updating specific distro: ${{ github.event.inputs.distro }}"
+            python update_linux_distros.py --update --distro "${{ github.event.inputs.distro }}"
+          else
+            echo "Updating all distros..."
+            python update_linux_distros.py --update
+          fi
+        # The script exits with code 1 if any upstream distro source temporarily fails (while others are successfully updated)
+        continue-on-error: true
+
+      - name: Validate JSON after update
+        run: python update_linux_distros.py --check
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add linux_distros.json
+          if git diff --staged --quiet; then
+            echo "No changes detected in linux_distros.json."
+          else
+            git commit -m "chore(distros): auto-update linux_distros.json [skip ci]"
+            git pull --rebase origin main
+            git push origin main
+          fi

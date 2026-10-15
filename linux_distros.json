@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-14T03:54:55Z",
+  "updated_utc": "2026-10-15T02:40:14Z",
   "source_repo": "https://github.com/tekdt/sezoybin",
   "note": "Data file for the SEZOY 'Linux Distro' download tab. SEZOY downloads urls[0] first and falls through to the next URL on failure. Run update_linux_distros.py to refresh automatically.",
   "distros": [
@@ -1553,6 +1553,608 @@
                 "https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18.1-Lite-64-bit.iso"
               ],
               "sha256": "b29ff7674cabb3d0698bdd0b39c1dbfc9def15f84d4a396de1ace1454c1e7a6d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rocky",
+      "name": "Rocky Linux",
+      "site": "https://rockylinux.org/download",
+      "editions": [
+        {
+          "id": "boot",
+          "name": "Boot (net installer)",
+          "versions": [
+            {
+              "version": "9.8",
+              "arch": "amd64",
+              "iso": "Rocky-9.8-x86_64-boot.iso",
+              "urls": [
+                "https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.8-x86_64-boot.iso"
+              ],
+              "sha256": "d6eeefdc8437c593d41a3150fcca4a734c55642ed472eecdda99720bb1370881",
+              "size": 1480048640
+            },
+            {
+              "version": "10.2",
+              "arch": "amd64",
+              "iso": "Rocky-10.2-x86_64-boot.iso",
+              "urls": [
+                "https://download.rockylinux.org/pub/rocky/10/isos/x86_64/Rocky-10.2-x86_64-boot.iso"
+              ],
+              "sha256": "bf3a75907948563d0c11f3d1b8546ee9216e18a3ea2dc0a67eb4c45452e210f9",
+              "size": 1049538560
+            }
+          ]
+        },
+        {
+          "id": "dvd",
+          "name": "DVD (full)",
+          "versions": [
+            {
+              "version": "9.8",
+              "arch": "amd64",
+              "iso": "Rocky-9.8-x86_64-dvd.iso",
+              "urls": [
+                "https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.8-x86_64-dvd.iso"
+              ],
+              "sha256": "d2bcbb64c2d67511adf80d40cd9543391a33aea5860a355b1d26d7f55236d01f",
+              "size": 15194259456
+            },
+            {
+              "version": "10.2",
+              "arch": "amd64",
+              "iso": "Rocky-10.2-x86_64-dvd1.iso",
+              "urls": [
+                "https://download.rockylinux.org/pub/rocky/10/isos/x86_64/Rocky-10.2-x86_64-dvd1.iso"
+              ],
+              "sha256": "16ca9c96cdb221ba6e1f68579f21bd69fd8da81c6a921d9068949796f91c8feb",
+              "size": 10226171904
+            }
+          ]
+        },
+        {
+          "id": "minimal",
+          "name": "Minimal",
+          "versions": [
+            {
+              "version": "9.8",
+              "arch": "amd64",
+              "iso": "Rocky-9.8-x86_64-minimal.iso",
+              "urls": [
+                "https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.8-x86_64-minimal.iso"
+              ],
+              "sha256": "d338032cd1cdd41c67139f2f71b4c832c8e4a21943106519db9c7137df7a63d4",
+              "size": 1480048640
+            },
+            {
+              "version": "10.2",
+              "arch": "amd64",
+              "iso": "Rocky-10.2-x86_64-minimal.iso",
+              "urls": [
+                "https://download.rockylinux.org/pub/rocky/10/isos/x86_64/Rocky-10.2-x86_64-minimal.iso"
+              ],
+              "sha256": "aac6ac3ce781b91a91ce78463405f66c611a5dca4b3840c79e5e01d97302f6c8",
+              "size": 2072444928
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "centos-stream",
+      "name": "CentOS Stream",
+      "site": "https://www.centos.org/download/",
+      "editions": [
+        {
+          "id": "boot",
+          "name": "Boot (net installer)",
+          "versions": [
+            {
+              "version": "9-20261013.0",
+              "arch": "amd64",
+              "iso": "CentOS-Stream-9-20261013.0-x86_64-boot.iso",
+              "urls": [
+                "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-20261013.0-x86_64-boot.iso"
+              ],
+              "sha256": "bcc679766490020b5a1cb068cccb80cde047592ac73b6c980c39897d4e62301e",
+              "size": 1572438016
+            },
+            {
+              "version": "10-20261013.0",
+              "arch": "amd64",
+              "iso": "CentOS-Stream-10-20261013.0-x86_64-boot.iso",
+              "urls": [
+                "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/iso/CentOS-Stream-10-20261013.0-x86_64-boot.iso"
+              ],
+              "sha256": "c07fb80f942051447a5b257fd28eca34e5d27e57dec9be1bb81cc5bee4387b29",
+              "size": 949528576
+            }
+          ]
+        },
+        {
+          "id": "dvd",
+          "name": "DVD (full)",
+          "versions": [
+            {
+              "version": "9-20261013.0",
+              "arch": "amd64",
+              "iso": "CentOS-Stream-9-20261013.0-x86_64-dvd1.iso",
+              "urls": [
+                "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-20261013.0-x86_64-dvd1.iso"
+              ],
+              "sha256": "5e9abc51b4021029c988e5a7e8aecccdf4ad4558dd8d8f7d212437c6b0887b72",
+              "size": 15728967680
+            },
+            {
+              "version": "10-20261013.0",
+              "arch": "amd64",
+              "iso": "CentOS-Stream-10-20261013.0-x86_64-dvd1.iso",
+              "urls": [
+                "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/iso/CentOS-Stream-10-20261013.0-x86_64-dvd1.iso"
+              ],
+              "sha256": "746efd3324556a4936e522078664e5814a750901cd5abb00ba403c9d9240d9ac",
+              "size": 10774773760
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "alpine",
+      "name": "Alpine Linux",
+      "site": "https://alpinelinux.org/downloads/",
+      "editions": [
+        {
+          "id": "extended",
+          "name": "Extended (extra packages)",
+          "versions": [
+            {
+              "version": "3.24.2",
+              "arch": "x86_64",
+              "iso": "alpine-extended-3.24.2-x86_64.iso",
+              "urls": [
+                "https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/alpine-extended-3.24.2-x86_64.iso"
+              ],
+              "sha256": "a22115a46a1bcd876234a6cd43797fe19f4acfc4512fb41ea64e16cc2ffb4d90"
+            },
+            {
+              "version": "3.24.1",
+              "arch": "x86_64",
+              "iso": "alpine-extended-3.24.1-x86_64.iso",
+              "urls": [
+                "https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/alpine-extended-3.24.1-x86_64.iso"
+              ],
+              "sha256": "dc54e0eba94db5c493a6160ba0c3a23b185d7b36d727bc9fad0964c757d3571b"
+            },
+            {
+              "version": "3.24.0",
+              "arch": "x86_64",
+              "iso": "alpine-extended-3.24.0-x86_64.iso",
+              "urls": [
+                "https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/alpine-extended-3.24.0-x86_64.iso"
+              ],
+              "sha256": "a9d8cc8c8176aabacde80d705569da102a90475f78424f57c8844612f2515511"
+            }
+          ]
+        },
+        {
+          "id": "standard",
+          "name": "Standard (console only)",
+          "versions": [
+            {
+              "version": "3.24.2",
+              "arch": "x86_64",
+              "iso": "alpine-standard-3.24.2-x86_64.iso",
+              "urls": [
+                "https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/alpine-standard-3.24.2-x86_64.iso"
+              ],
+              "sha256": "20c026e3a788bfb75fc8b50a54bcc12aee85e3c75909740bba6a6f4563d63296"
+            },
+            {
+              "version": "3.24.1",
+              "arch": "x86_64",
+              "iso": "alpine-standard-3.24.1-x86_64.iso",
+              "urls": [
+                "https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/alpine-standard-3.24.1-x86_64.iso"
+              ],
+              "sha256": "f4dd613206676c62949144c8ad75fc64582099f444dd1485bae104a60f51dd26"
+            },
+            {
+              "version": "3.24.0",
+              "arch": "x86_64",
+              "iso": "alpine-standard-3.24.0-x86_64.iso",
+              "urls": [
+                "https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/alpine-standard-3.24.0-x86_64.iso"
+              ],
+              "sha256": "9f8bf67c1604381bf056f907d77adaf301fad9cc7b9e1fb73660c1b66f3ebd9f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pop-os",
+      "name": "Pop!_OS",
+      "site": "https://system76.com/pop/",
+      "editions": [
+        {
+          "id": "intel",
+          "name": "Intel / AMD Graphics",
+          "versions": [
+            {
+              "version": "22.04",
+              "arch": "amd64",
+              "iso": "pop-os_22.04_amd64_intel_58.iso",
+              "urls": [
+                "https://iso.pop-os.org/22.04/amd64/intel/58/pop-os_22.04_amd64_intel_58.iso"
+              ],
+              "sha256": "4e1c5e391062c79dc611ce383c2a709fecac36798ebd81444a734fd41252608e"
+            }
+          ]
+        },
+        {
+          "id": "nvidia",
+          "name": "NVIDIA Graphics",
+          "versions": [
+            {
+              "version": "22.04",
+              "arch": "amd64",
+              "iso": "pop-os_22.04_amd64_nvidia_58.iso",
+              "urls": [
+                "https://iso.pop-os.org/22.04/amd64/nvidia/58/pop-os_22.04_amd64_nvidia_58.iso"
+              ],
+              "sha256": "2b622525da3fd4deb913540810ffe68651a529acd57bcf44bb7f69df6161fec0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tails",
+      "name": "Tails",
+      "site": "https://tails.net/",
+      "editions": [
+        {
+          "id": "live",
+          "name": "Live (Amnesic Incognito)",
+          "versions": [
+            {
+              "version": "7.15",
+              "arch": "amd64",
+              "iso": "tails-amd64-7.15.iso",
+              "size": 1879158784,
+              "sha256": "48fc76cd04b92b0c7b91ff29d1cfd11569b7cd464ae0063b3eae4e5f96139825",
+              "urls": [
+                "https://download.tails.net/tails/stable/tails-amd64-7.15/tails-amd64-7.15.iso",
+                "https://mirrors.edge.kernel.org/tails/stable/tails-amd64-7.15.iso"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubuntu-mate",
+      "name": "Ubuntu MATE",
+      "site": "https://ubuntu-mate.org/download/",
+      "editions": [
+        {
+          "id": "desktop-lts",
+          "name": "Desktop LTS (MATE)",
+          "versions": [
+            {
+              "version": "24.04.5",
+              "arch": "amd64",
+              "iso": "ubuntu-mate-24.04.5-desktop-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/ubuntu-mate/releases/24.04/release/ubuntu-mate-24.04.5-desktop-amd64.iso"
+              ],
+              "sha256": "60430d35da5c0bdb3d84a2fdf4052495256fc26ec300d7cd5a9933a534f0422c"
+            },
+            {
+              "version": "24.04.4",
+              "arch": "amd64",
+              "iso": "ubuntu-mate-24.04.4-desktop-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/ubuntu-mate/releases/24.04/release/ubuntu-mate-24.04.4-desktop-amd64.iso"
+              ],
+              "sha256": "8b7c08c056ba9312fe83e5bf13751216236e6382584861c3b64701ae039c4009"
+            },
+            {
+              "version": "24.04.3",
+              "arch": "amd64",
+              "iso": "ubuntu-mate-24.04.3-desktop-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/ubuntu-mate/releases/24.04/release/ubuntu-mate-24.04.3-desktop-amd64.iso"
+              ],
+              "sha256": "370b6f05935b7ef350eff2c5eb912c0fcf4c42c9ac2b246f2f9249cfb7d09151"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubuntu-budgie",
+      "name": "Ubuntu Budgie",
+      "site": "https://ubuntubudgie.org/downloads/",
+      "editions": [
+        {
+          "id": "desktop-lts",
+          "name": "Desktop LTS (Budgie)",
+          "versions": [
+            {
+              "version": "24.04.5",
+              "arch": "amd64",
+              "iso": "ubuntu-budgie-24.04.5-desktop-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/ubuntu-budgie/releases/24.04/release/ubuntu-budgie-24.04.5-desktop-amd64.iso"
+              ],
+              "sha256": "40435a36706c39844187c660fb6f20ccf23a787fae356dc8b5cb4572b93846fe"
+            },
+            {
+              "version": "24.04.4",
+              "arch": "amd64",
+              "iso": "ubuntu-budgie-24.04.4-desktop-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/ubuntu-budgie/releases/24.04/release/ubuntu-budgie-24.04.4-desktop-amd64.iso"
+              ],
+              "sha256": "073cb08e75a2d54826d5be5f32a0d4befbb9767508a6a28d7f0a3c2408b88b94"
+            },
+            {
+              "version": "24.04.3",
+              "arch": "amd64",
+              "iso": "ubuntu-budgie-24.04.3-desktop-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/ubuntu-budgie/releases/24.04/release/ubuntu-budgie-24.04.3-desktop-amd64.iso"
+              ],
+              "sha256": "7acb4d56ea3edd79d6e8023d5bdcdf2bd04e11180e3a47f5355218e3bd11198d"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubuntustudio",
+      "name": "Ubuntu Studio",
+      "site": "https://ubuntustudio.org/download/",
+      "editions": [
+        {
+          "id": "dvd-lts",
+          "name": "DVD LTS (Creative Suite)",
+          "versions": [
+            {
+              "version": "24.04.5",
+              "arch": "amd64",
+              "iso": "ubuntustudio-24.04.5-dvd-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/ubuntustudio/releases/24.04/release/ubuntustudio-24.04.5-dvd-amd64.iso"
+              ],
+              "sha256": "a2730c421b9a7427c3a7d6f32baa1b5420c950e17c3affa7fb0c23ab635de538"
+            },
+            {
+              "version": "24.04.4",
+              "arch": "amd64",
+              "iso": "ubuntustudio-24.04.4-dvd-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/ubuntustudio/releases/24.04/release/ubuntustudio-24.04.4-dvd-amd64.iso"
+              ],
+              "sha256": "f5b812a26055cf50490e6b11a36d8f9a274bcd4d161cd55d57a5322eab99fe62"
+            },
+            {
+              "version": "24.04.3",
+              "arch": "amd64",
+              "iso": "ubuntustudio-24.04.3-dvd-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/ubuntustudio/releases/24.04/release/ubuntustudio-24.04.3-dvd-amd64.iso"
+              ],
+              "sha256": "30573f753d2d3bad3d07ce88e38b5b9da4c8a479d96161cc8d5bb5dc8f38c47f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ubuntukylin",
+      "name": "Ubuntu Kylin",
+      "site": "https://www.ubuntukylin.com/downloads/",
+      "editions": [
+        {
+          "id": "desktop-lts",
+          "name": "Desktop LTS (UKUI)",
+          "versions": [
+            {
+              "version": "24.04.5",
+              "arch": "amd64",
+              "iso": "ubuntukylin-24.04.5-desktop-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/ubuntukylin/releases/24.04/release/ubuntukylin-24.04.5-desktop-amd64.iso"
+              ],
+              "sha256": "8c3c89a59b50d3fc9d1affd087d19a3a670ecc5b34cc1e3ab05137bd7ec1b553"
+            },
+            {
+              "version": "24.04.4",
+              "arch": "amd64",
+              "iso": "ubuntukylin-24.04.4-desktop-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/ubuntukylin/releases/24.04/release/ubuntukylin-24.04.4-desktop-amd64.iso"
+              ],
+              "sha256": "075498a2fb636b163abf16ef9fe839a3e804316ac88ada7907eaf0204ef5fc66"
+            },
+            {
+              "version": "24.04.3",
+              "arch": "amd64",
+              "iso": "ubuntukylin-24.04.3-desktop-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/ubuntukylin/releases/24.04/release/ubuntukylin-24.04.3-desktop-amd64.iso"
+              ],
+              "sha256": "10c7492af35cb69c1b00782d4cc929d864fb0b84863706926a8de12c2b39a948"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "edubuntu",
+      "name": "Edubuntu",
+      "site": "https://www.edubuntu.org/download",
+      "editions": [
+        {
+          "id": "desktop-lts",
+          "name": "Desktop LTS (Education)",
+          "versions": [
+            {
+              "version": "24.04.5",
+              "arch": "amd64",
+              "iso": "edubuntu-24.04.5-desktop-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/edubuntu/releases/24.04/release/edubuntu-24.04.5-desktop-amd64.iso"
+              ],
+              "sha256": "406308c9992a6796a0fc99b74f415a626da7dbb0c14d4447f2d4b547b9857be0"
+            },
+            {
+              "version": "24.04.4",
+              "arch": "amd64",
+              "iso": "edubuntu-24.04.4-desktop-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/edubuntu/releases/24.04/release/edubuntu-24.04.4-desktop-amd64.iso"
+              ],
+              "sha256": "adeb42e99c834f25530a9f125248dfc3b554461e1395b99e1c5495026cc45f86"
+            },
+            {
+              "version": "24.04.3",
+              "arch": "amd64",
+              "iso": "edubuntu-24.04.3-desktop-amd64.iso",
+              "urls": [
+                "https://cdimage.ubuntu.com/edubuntu/releases/24.04/release/edubuntu-24.04.3-desktop-amd64.iso"
+              ],
+              "sha256": "e874f828c304a0aaf37cc6380babcf44c123b4ada544de43e12a694623f18a42"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mageia",
+      "name": "Mageia",
+      "site": "https://www.mageia.org/en/downloads/",
+      "editions": [
+        {
+          "id": "gnome",
+          "name": "GNOME Live",
+          "versions": [
+            {
+              "version": "10",
+              "arch": "x86_64",
+              "iso": "Mageia-10-Live-GNOME-x86_64.iso",
+              "urls": [
+                "https://mirrors.kernel.org/mageia/iso/10/Mageia-10-Live-GNOME-x86_64/Mageia-10-Live-GNOME-x86_64.iso"
+              ],
+              "sha512": "01d991d5da928fc4700a3495c72e00f7378b5cf66732fad2c753a49295d32c921dffe8f894c48a7e5a62bef8391084bf511544d6b07e16bdd1e5471d9c640676"
+            }
+          ]
+        },
+        {
+          "id": "plasma",
+          "name": "Plasma Live",
+          "versions": [
+            {
+              "version": "10",
+              "arch": "x86_64",
+              "iso": "Mageia-10-Live-Plasma-x86_64.iso",
+              "urls": [
+                "https://mirrors.kernel.org/mageia/iso/10/Mageia-10-Live-Plasma-x86_64/Mageia-10-Live-Plasma-x86_64.iso"
+              ],
+              "sha512": "096b7d33bd7aecd26a461cbbec1e5750b7570f22e5eca1529bdde04f612f02964dcd139261b25358aa6b50958ee91412dcd598109f150e53a4cf537d5d0eda6a"
+            }
+          ]
+        },
+        {
+          "id": "xfce",
+          "name": "Xfce Live",
+          "versions": [
+            {
+              "version": "10",
+              "arch": "x86_64",
+              "iso": "Mageia-10-Live-Xfce-x86_64.iso",
+              "urls": [
+                "https://mirrors.kernel.org/mageia/iso/10/Mageia-10-Live-Xfce-x86_64/Mageia-10-Live-Xfce-x86_64.iso"
+              ],
+              "sha512": "11ffc1b21ca684fbd0ab42b6da69aee92c1fff65f89f317d9202d7d0f590aabd2b48e65ae6551f0e8009261e8152b3d797b47db07bbe0e865b3af58a10ca24d1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4os",
+      "name": "Q4OS",
+      "site": "https://q4os.org/downloads1.html",
+      "editions": [
+        {
+          "id": "desktop",
+          "name": "Desktop Edition",
+          "versions": [
+            {
+              "version": "6.10",
+              "arch": "amd64",
+              "iso": "stable/q4os-6.10-x64.r2.iso",
+              "size": 1851392000,
+              "sha256": "1df141eaa342bbfd0092791a60f1ae9cf5230e8ebb472f87fcb463203e3eb95d",
+              "urls": [
+                "https://downloads.sourceforge.net/project/q4os/stable/q4os-6.10-x64.r2.iso",
+                "https://sourceforge.net/projects/q4os/files/stable/q4os-6.10-x64.r2.iso/download"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bodhilinux",
+      "name": "Bodhi Linux",
+      "site": "https://www.bodhilinux.com/download/",
+      "editions": [
+        {
+          "id": "standard",
+          "name": "Standard (Moksha Desktop)",
+          "versions": [
+            {
+              "version": "7.0.0",
+              "arch": "amd64",
+              "iso": "7.0.0/bodhi-7.0.0-64.iso",
+              "size": 1290584064,
+              "sha256": "0ddfc1d917b496fade58f141ef1b07ab798b41cc2d23c8e1b5ad9b288f27c538",
+              "urls": [
+                "https://downloads.sourceforge.net/project/bodhilinux/7.0.0/bodhi-7.0.0-64.iso",
+                "https://sourceforge.net/projects/bodhilinux/files/7.0.0/bodhi-7.0.0-64.iso/download"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sparkylinux",
+      "name": "SparkyLinux",
+      "site": "https://sparkylinux.org/download/",
+      "editions": [
+        {
+          "id": "minimalgui",
+          "name": "MinimalGUI",
+          "versions": [
+            {
+              "version": "2026.09",
+              "arch": "x86_64",
+              "iso": "base/sparkylinux-2026.09-x86_64-minimalgui-labwc.iso",
+              "size": 1883242496,
+              "sha256": "128aaab9583f852650c8368cba42e9250f2c91189cce64f768366b5ecc04e0fa",
+              "urls": [
+                "https://downloads.sourceforge.net/project/sparkylinux/base/sparkylinux-2026.09-x86_64-minimalgui-labwc.iso",
+                "https://sourceforge.net/projects/sparkylinux/files/base/sparkylinux-2026.09-x86_64-minimalgui-labwc.iso/download"
+              ]
             }
           ]
         }
