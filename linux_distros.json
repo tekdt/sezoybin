@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-15T03:53:02Z",
+  "updated_utc": "2026-10-15T04:05:58Z",
   "source_repo": "https://github.com/tekdt/sezoybin",
   "note": "Data file for the SEZOY 'Linux Distro' download tab. SEZOY downloads urls[0] first and falls through to the next URL on failure. Run update_linux_distros.py to refresh automatically.",
   "distros": [
@@ -934,6 +934,15 @@
           "id": "dr460nized",
           "name": "Dr460nized (KDE gaming)",
           "versions": [
+            {
+              "version": "261015",
+              "arch": "x86_64",
+              "iso": "garuda-dr460nized-linux-garuda-261015.iso",
+              "urls": [
+                "https://iso.builds.garudalinux.org/iso/garuda/dr460nized/261015/garuda-dr460nized-linux-garuda-261015.iso"
+              ],
+              "sha256": "cfc9a24f8bffaad85c5d4a1504622fd9b758aeaeae232c19b90a72e0c817ba23"
+            },
             {
               "version": "261014",
               "arch": "x86_64",
