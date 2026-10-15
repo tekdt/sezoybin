@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-15T02:40:14Z",
+  "updated_utc": "2026-10-15T03:00:06Z",
   "source_repo": "https://github.com/tekdt/sezoybin",
   "note": "Data file for the SEZOY 'Linux Distro' download tab. SEZOY downloads urls[0] first and falls through to the next URL on failure. Run update_linux_distros.py to refresh automatically.",
   "distros": [
@@ -40,6 +40,16 @@
           "name": "Live Server",
           "versions": [
             {
+              "version": "24.04.5",
+              "arch": "amd64",
+              "iso": "ubuntu-24.04.5-live-server-amd64.iso",
+              "sha256": "97f3d7ffb032c3eb3b23d2c8be9cc76e60c2c1f2c0146ba5ba9fe01cafae0fd8",
+              "urls": [
+                "https://releases.ubuntu.com/24.04/ubuntu-24.04.5-live-server-amd64.iso",
+                "https://releases.ubuntu.com/noble/ubuntu-24.04.5-live-server-amd64.iso"
+              ]
+            },
+            {
               "version": "24.04.4",
               "arch": "amd64",
               "iso": "ubuntu-24.04.4-live-server-amd64.iso",
@@ -58,16 +68,6 @@
                 "https://releases.ubuntu.com/noble/ubuntu-24.04.3-live-server-amd64.iso"
               ],
               "sha256": "c3514bf0056180d09376462a7a1b4f213c1d6e8ea67fae5c25099c6fd3d8274b"
-            },
-            {
-              "version": "24.04.5",
-              "arch": "amd64",
-              "iso": "ubuntu-24.04.5-live-server-amd64.iso",
-              "sha256": "97f3d7ffb032c3eb3b23d2c8be9cc76e60c2c1f2c0146ba5ba9fe01cafae0fd8",
-              "urls": [
-                "https://releases.ubuntu.com/24.04/ubuntu-24.04.5-live-server-amd64.iso",
-                "https://releases.ubuntu.com/noble/ubuntu-24.04.5-live-server-amd64.iso"
-              ]
             }
           ]
         }
@@ -478,6 +478,15 @@
           "name": "DVD snapshot",
           "versions": [
             {
+              "version": "20261013",
+              "arch": "x86_64",
+              "iso": "openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261013-Media.iso",
+              "urls": [
+                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261013-Media.iso"
+              ],
+              "sha256": "dcae88650d8c552b10221839819b477b1dc86e6e14aa138d4e19859f9dcd9c90"
+            },
+            {
               "version": "20261012",
               "arch": "x86_64",
               "iso": "openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261012-Media.iso",
@@ -492,6 +501,15 @@
           "id": "net",
           "name": "Net installer snapshot",
           "versions": [
+            {
+              "version": "20261013",
+              "arch": "x86_64",
+              "iso": "openSUSE-Tumbleweed-NET-x86_64-Snapshot20261013-Media.iso",
+              "urls": [
+                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20261013-Media.iso"
+              ],
+              "sha256": "0f56ceed34d63c3ebaa36fa78e32cfb4c08d60ca6de09b1d2982e3a3c3164ec2"
+            },
             {
               "version": "20261012",
               "arch": "x86_64",
@@ -772,7 +790,7 @@
               "arch": "amd64",
               "iso": "winux-11.26.10-noble-lts.iso",
               "size": 6685507584,
-              "sha256": null,
+              "sha256": "5ba96c841a12518b0df69f8ed1d506f1c4e86ad343c3bfdc01ef789424739630",
               "urls": [
                 "https://downloads.sourceforge.net/project/windows-linux/winux-11.26.10-noble-lts.iso",
                 "https://sourceforge.net/projects/windows-linux/files/winux-11.26.10-noble-lts.iso/download"
@@ -897,7 +915,8 @@
               "iso": "garuda-dr460nized-linux-garuda-261014.iso",
               "urls": [
                 "https://iso.builds.garudalinux.org/iso/garuda/dr460nized/261014/garuda-dr460nized-linux-garuda-261014.iso"
-              ]
+              ],
+              "sha256": "87dfff67a07a572e5f0e4fb801c272c412191d24361f227a26367757a3c0fe06"
             }
           ]
         },
