@@ -563,7 +563,11 @@ DISTRO_SPECS = [
         "id": "fedora", "name": "Fedora",
         "site": "https://fedoraproject.org/workstation/download",
         "kind": "fedora",
-        "root": "https://download.fedoraproject.org/pub/fedora/linux/releases/",
+        "roots": [
+            "https://mirrors.kernel.org/fedora/releases/",
+            "https://download.fedoraproject.org/pub/fedora/linux/releases/",
+            "https://dl.fedoraproject.org/pub/fedora/linux/releases/",
+        ],
         "editions": [
             ("workstation-live", "Workstation Live", "Workstation"),
             ("server-dvd", "Server DVD", "Server"),
@@ -762,6 +766,35 @@ DISTRO_SPECS = [
         "rules": [
             {"match": r"sparkylinux-(?P<ver>[\d.]+)-x86_64-(?P<ed>minimalgui[a-z-]*)\.iso",
              "edition": "minimalgui", "edition_name": "MinimalGUI"},
+        ],
+    },
+    {
+        "id": "puppy", "name": "Puppy Linux",
+        "site": "https://puppylinux-woof-ce.github.io/",
+        "kind": "sidecar",
+        "sha_suffix": ["-checksum.txt", ".sha256.txt"],
+        "discovers": [
+            {
+                "url": "https://distro.ibiblio.org/puppylinux/puppy-bookwormpup/BookwormPup64/",
+                "dir_re": r'href="(\d+(?:\.\d+)+)/"',
+                "file_page": "{url}{ver}/",
+                "mirrors": ["https://distro.ibiblio.org/puppylinux/puppy-bookwormpup/BookwormPup64/{ver}/"],
+                "edition": "bookwormpup64", "edition_name": "BookwormPup64 (Debian 12-based)",
+                "try_desc": True,
+            },
+        ],
+        "listings": [
+            {
+                "listing": "https://distro.ibiblio.org/puppylinux/puppy-fossa/",
+                "mirrors": ["https://distro.ibiblio.org/puppylinux/puppy-fossa/"],
+            }
+        ],
+        "default_arch": "amd64",
+        "rules": [
+            {"match": r"BookwormPup64_(?P<ver>[\d.]+)\.iso",
+             "edition": "bookwormpup64", "edition_name": "BookwormPup64 (Debian 12-based)"},
+            {"match": r"fossapup64-(?P<ver>[\d.]+)\.iso",
+             "edition": "fossapup64", "edition_name": "FossaPup64 (Ubuntu 20.04-based)"},
         ],
     },
 ]
@@ -1101,12 +1134,16 @@ def run_sums_spec(spec):
 
 def _sidecar_sha(sha_base, filename, suffix=".sha256"):
     """Fetch sibling checksum file, return (field, hash) or (None, None)."""
-    try:
-        text = fetch_text(sha_base + filename + suffix)
-    except Exception:
-        return None, None
-    m = re.search(r"([0-9a-fA-F]{128}|[0-9a-fA-F]{64})", text)
-    return _hash_field(m.group(1).lower()) if m else (None, None)
+    suffixes = [suffix] if isinstance(suffix, str) else list(suffix)
+    for s in suffixes:
+        try:
+            text = fetch_text(sha_base + filename + s)
+            m = re.search(r"([0-9a-fA-F]{128}|[0-9a-fA-F]{64})", text)
+            if m:
+                return _hash_field(m.group(1).lower())
+        except Exception:
+            continue
+    return None, None
 
 
 def _sidecar_jobs(spec):
@@ -1331,38 +1368,53 @@ def run_pop_os_spec(spec):
 
 
 def run_fedora_spec(spec):
-    root = spec["root"]
-    html = fetch_text(root)
-    nums = sorted({int(m.group(1)) for m in
-                   (re.match(r"(\d+)/?$", l.strip("/"))
-                    for l in re.findall(r'href="([^"]+)"', html)) if m})
-    if not nums:
-        raise ValueError("no Fedora releases listed at " + root)
-    rel = str(nums[-1])
-    out = []
-    for edition_id, edition_name, sub in spec["editions"]:
-        d = "%s%s/%s/x86_64/iso/" % (root, rel, sub)
-        page = fetch_text(d)
-        isos = sorted({l for l in re.findall(r'href="([^"]+)"', page)
-                       if l.endswith(".iso")})
-        chk = {}
-        m = re.search(r'href="([^"]*CHECKSUM[^"]*)"', page)
-        if m:
-            ctext = fetch_text(d + m.group(1))
-            for cm in re.finditer(r"^SHA256\s*\(([^)]+)\)\s*=\s*([0-9a-fA-F]{64})",
-                                  ctext, re.M):
-                chk[cm.group(1)] = cm.group(2).lower()
-        rows = [{"version": rel, "arch": "x86_64", "iso": iso,
-                 "sha256": chk.get(iso),
-                 "urls": [d + iso,
-                          d.replace("https://download.fedoraproject.org",
-                                    "https://dl.fedoraproject.org") + iso]}
-                for iso in isos]
-        if rows:
-            out.append({"id": edition_id, "name": edition_name, "versions": rows})
-    if not out:
-        raise ValueError("no Fedora ISOs parsed for release " + rel)
-    return out
+    roots = spec.get("roots") or ([spec["root"]] if "root" in spec else [])
+    last_err = None
+    for root in roots:
+        try:
+            html = fetch_text(root)
+            nums = sorted({int(m.group(1)) for m in
+                           (re.search(r"(?:^|/)(\d+)/?$", l)
+                            for l in re.findall(r'href="([^"]+)"', html))
+                           if m and 20 <= int(m.group(1)) <= 99})
+            if not nums:
+                continue
+            rel = str(nums[-1])
+            out = []
+            for edition_id, edition_name, sub in spec["editions"]:
+                d = "%s%s/%s/x86_64/iso/" % (root, rel, sub)
+                page = fetch_text(d)
+                isos = sorted({l.split("/")[-1] for l in re.findall(r'href="([^"]+)"', page)
+                               if l.endswith(".iso")})
+                chk = {}
+                m = re.search(r'href="([^"]*CHECKSUM[^"]*)"', page)
+                if m:
+                    chk_file = m.group(1).split("/")[-1]
+                    ctext = fetch_text(d + chk_file)
+                    for cm in re.finditer(r"^SHA256\s*\(([^)]+)\)\s*=\s*([0-9a-fA-F]{64})",
+                                          ctext, re.M):
+                        chk[cm.group(1)] = cm.group(2).lower()
+                rows = []
+                for iso in isos:
+                    mirrors = [
+                        r + ("%s/%s/x86_64/iso/" % (rel, sub)) + iso
+                        for r in roots
+                    ]
+                    rows.append({
+                        "version": rel,
+                        "arch": "x86_64",
+                        "iso": iso,
+                        "sha256": chk.get(iso),
+                        "urls": mirrors,
+                    })
+                if rows:
+                    out.append({"id": edition_id, "name": edition_name, "versions": rows})
+            if out:
+                return out
+        except Exception as exc:
+            last_err = exc
+            continue
+    raise ValueError("no Fedora releases found across roots %r (last error: %s)" % (roots, last_err))
 
 
 def run_spec(spec):

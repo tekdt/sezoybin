@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-15T02:40:14Z",
+  "updated_utc": "2026-10-15T03:08:47Z",
   "source_repo": "https://github.com/tekdt/sezoybin",
   "note": "Data file for the SEZOY 'Linux Distro' download tab. SEZOY downloads urls[0] first and falls through to the next URL on failure. Run update_linux_distros.py to refresh automatically.",
   "distros": [
@@ -123,6 +123,17 @@
           "name": "Workstation Live",
           "versions": [
             {
+              "version": "44",
+              "arch": "x86_64",
+              "iso": "Fedora-Workstation-Live-44-1.7.x86_64.iso",
+              "sha256": "1620295f6a00c27c3208f0c00b8ece4eab1ec69b9002152d97488bf26a426ddf",
+              "urls": [
+                "https://mirrors.kernel.org/fedora/releases/44/Workstation/x86_64/iso/Fedora-Workstation-Live-44-1.7.x86_64.iso",
+                "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Workstation/x86_64/iso/Fedora-Workstation-Live-44-1.7.x86_64.iso",
+                "https://dl.fedoraproject.org/pub/fedora/linux/releases/44/Workstation/x86_64/iso/Fedora-Workstation-Live-44-1.7.x86_64.iso"
+              ]
+            },
+            {
               "version": "42",
               "arch": "x86_64",
               "iso": "Fedora-Workstation-Live-42-1.1.x86_64.iso",
@@ -139,6 +150,20 @@
           "id": "server-dvd",
           "name": "Server DVD",
           "versions": [
+            {
+              "version": "44",
+              "arch": "x86_64",
+              "iso": "Fedora-Server-netinst-x86_64-44-1.7.iso",
+              "sha256": "ae20c06bea746913cadea7d80463e13f4bf55bee4df2918111c921c674b70283",
+              "urls": [
+                "https://mirrors.kernel.org/fedora/releases/44/Server/x86_64/iso/Fedora-Server-netinst-x86_64-44-1.7.iso",
+                "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Server/x86_64/iso/Fedora-Server-netinst-x86_64-44-1.7.iso",
+                "https://dl.fedoraproject.org/pub/fedora/linux/releases/44/Server/x86_64/iso/Fedora-Server-netinst-x86_64-44-1.7.iso",
+                "https://mirrors.kernel.org/fedora/releases/44/Server/x86_64/iso/Fedora-Server-dvd-x86_64-44-1.7.iso",
+                "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Server/x86_64/iso/Fedora-Server-dvd-x86_64-44-1.7.iso",
+                "https://dl.fedoraproject.org/pub/fedora/linux/releases/44/Server/x86_64/iso/Fedora-Server-dvd-x86_64-44-1.7.iso"
+              ]
+            },
             {
               "version": "42",
               "arch": "x86_64",
@@ -2155,6 +2180,43 @@
                 "https://downloads.sourceforge.net/project/sparkylinux/base/sparkylinux-2026.09-x86_64-minimalgui-labwc.iso",
                 "https://sourceforge.net/projects/sparkylinux/files/base/sparkylinux-2026.09-x86_64-minimalgui-labwc.iso/download"
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "puppy",
+      "name": "Puppy Linux",
+      "site": "https://puppylinux-woof-ce.github.io/",
+      "editions": [
+        {
+          "id": "fossapup64",
+          "name": "FossaPup64 (Ubuntu 20.04-based)",
+          "versions": [
+            {
+              "version": "9.5",
+              "arch": "amd64",
+              "iso": "fossapup64-9.5.iso",
+              "urls": [
+                "https://distro.ibiblio.org/puppylinux/puppy-fossa/fossapup64-9.5.iso"
+              ],
+              "sha256": "9f30d1c86f7e905833377b411c57866b30e59fe4535161002005bb938e8b38f5"
+            }
+          ]
+        },
+        {
+          "id": "bookwormpup64",
+          "name": "BookwormPup64 (Debian 12-based)",
+          "versions": [
+            {
+              "version": "10.0.12",
+              "arch": "amd64",
+              "iso": "BookwormPup64_10.0.12.iso",
+              "urls": [
+                "https://distro.ibiblio.org/puppylinux/puppy-bookwormpup/BookwormPup64/10.0.12/BookwormPup64_10.0.12.iso"
+              ],
+              "sha256": "ae65f6e6d70a96f48bdbb291c2426f8a2fd77a73692e149e81a5eecb6fe7509f"
             }
           ]
         }
