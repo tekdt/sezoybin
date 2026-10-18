@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-15T04:05:58Z",
+  "updated_utc": "2026-10-18T02:54:26Z",
   "source_repo": "https://github.com/tekdt/sezoybin",
   "note": "Data file for the SEZOY 'Linux Distro' download tab. SEZOY downloads urls[0] first and falls through to the next URL on failure. Run update_linux_distros.py to refresh automatically.",
   "distros": [
@@ -503,6 +503,15 @@
           "name": "DVD snapshot",
           "versions": [
             {
+              "version": "20261016",
+              "arch": "x86_64",
+              "iso": "openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261016-Media.iso",
+              "urls": [
+                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261016-Media.iso"
+              ],
+              "sha256": "2a5d04dfdd254bf27881c2b56c25d1e48fc4138df2ea0ca464f00759ff646b0d"
+            },
+            {
               "version": "20261013",
               "arch": "x86_64",
               "iso": "openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261013-Media.iso",
@@ -526,6 +535,15 @@
           "id": "net",
           "name": "Net installer snapshot",
           "versions": [
+            {
+              "version": "20261016",
+              "arch": "x86_64",
+              "iso": "openSUSE-Tumbleweed-NET-x86_64-Snapshot20261016-Media.iso",
+              "urls": [
+                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20261016-Media.iso"
+              ],
+              "sha256": "7f9ceb23ab70e4747c6f787ed0f755be05a0e92f3c17d692595162809af8d60a"
+            },
             {
               "version": "20261013",
               "arch": "x86_64",
@@ -735,6 +753,15 @@
           "name": "Ubuntu-based (Xfce)",
           "versions": [
             {
+              "version": "26.10",
+              "arch": "amd64",
+              "iso": "asmi-linux-26.10-amd64.iso",
+              "urls": [
+                "https://dl.teejeetech.com/asmi/asmi-linux-26.10-amd64.iso"
+              ],
+              "sha256": "da8803b22daa76aaeb101bd3208182b542b22a1ce7362c685184ba280e963b6a"
+            },
+            {
               "version": "26.04.1",
               "arch": "amd64",
               "iso": "asmi-linux-26.04.1-amd64.iso",
@@ -935,6 +962,15 @@
           "name": "Dr460nized (KDE gaming)",
           "versions": [
             {
+              "version": "261017",
+              "arch": "x86_64",
+              "iso": "garuda-dr460nized-linux-garuda-261017.iso",
+              "urls": [
+                "https://iso.builds.garudalinux.org/iso/garuda/dr460nized/261017/garuda-dr460nized-linux-garuda-261017.iso"
+              ],
+              "sha256": "74bda18564e182216ced1f5434594e069ea9b3609a92eecf528c4d73821b89ec"
+            },
+            {
               "version": "261015",
               "arch": "x86_64",
               "iso": "garuda-dr460nized-linux-garuda-261015.iso",
@@ -942,15 +978,6 @@
                 "https://iso.builds.garudalinux.org/iso/garuda/dr460nized/261015/garuda-dr460nized-linux-garuda-261015.iso"
               ],
               "sha256": "cfc9a24f8bffaad85c5d4a1504622fd9b758aeaeae232c19b90a72e0c817ba23"
-            },
-            {
-              "version": "261014",
-              "arch": "x86_64",
-              "iso": "garuda-dr460nized-linux-garuda-261014.iso",
-              "urls": [
-                "https://iso.builds.garudalinux.org/iso/garuda/dr460nized/261014/garuda-dr460nized-linux-garuda-261014.iso"
-              ],
-              "sha256": "87dfff67a07a572e5f0e4fb801c272c412191d24361f227a26367757a3c0fe06"
             }
           ]
         },
