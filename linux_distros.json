@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-10-18T02:54:26Z",
+  "updated_utc": "2026-10-25T03:05:45Z",
   "source_repo": "https://github.com/tekdt/sezoybin",
   "note": "Data file for the SEZOY 'Linux Distro' download tab. SEZOY downloads urls[0] first and falls through to the next URL on failure. Run update_linux_distros.py to refresh automatically.",
   "distros": [
@@ -189,6 +189,24 @@
           "name": "Installer (full offline)",
           "versions": [
             {
+              "version": "2026.3",
+              "arch": "amd64",
+              "iso": "kali-linux-2026.3-installer-amd64.iso",
+              "urls": [
+                "https://cdimage.kali.org/current/kali-linux-2026.3-installer-amd64.iso"
+              ],
+              "sha256": "db9cbed33edb45727d16911813c2434fcd1419585007884153be22a03b30ec2f"
+            },
+            {
+              "version": "2026.3",
+              "arch": "arm64",
+              "iso": "kali-linux-2026.3-installer-arm64.iso",
+              "urls": [
+                "https://cdimage.kali.org/current/kali-linux-2026.3-installer-arm64.iso"
+              ],
+              "sha256": "c4a7f9bf3a0ff07c8263fe9e9b0edba0cc3d9b408f1d8f06c066df0afce23072"
+            },
+            {
               "version": "2026.2",
               "arch": "amd64",
               "iso": "kali-linux-2026.2-installer-amd64.iso",
@@ -213,6 +231,24 @@
           "name": "NetInstaller (small)",
           "versions": [
             {
+              "version": "2026.3",
+              "arch": "amd64",
+              "iso": "kali-linux-2026.3-installer-netinst-amd64.iso",
+              "urls": [
+                "https://cdimage.kali.org/current/kali-linux-2026.3-installer-netinst-amd64.iso"
+              ],
+              "sha256": "0dd3e70f2e0b092286b29355450bc79a034a13fb1d5b4bf83c297149115258cd"
+            },
+            {
+              "version": "2026.3",
+              "arch": "arm64",
+              "iso": "kali-linux-2026.3-installer-netinst-arm64.iso",
+              "urls": [
+                "https://cdimage.kali.org/current/kali-linux-2026.3-installer-netinst-arm64.iso"
+              ],
+              "sha256": "a986c7fe0f8e887a77e7ea9f868da88eae04e7ac780ae75e6b702f243b63bf8d"
+            },
+            {
               "version": "2026.2",
               "arch": "amd64",
               "iso": "kali-linux-2026.2-installer-netinst-amd64.iso",
@@ -236,6 +272,24 @@
           "id": "live",
           "name": "Live (try without installing)",
           "versions": [
+            {
+              "version": "2026.3",
+              "arch": "amd64",
+              "iso": "kali-linux-2026.3-live-amd64.iso",
+              "urls": [
+                "https://cdimage.kali.org/current/kali-linux-2026.3-live-amd64.iso"
+              ],
+              "sha256": "93a40ef53936719119824c3f0f0742ab50a045e2e082b95e382cf9f2f1f8acbb"
+            },
+            {
+              "version": "2026.3",
+              "arch": "arm64",
+              "iso": "kali-linux-2026.3-live-arm64.iso",
+              "urls": [
+                "https://cdimage.kali.org/current/kali-linux-2026.3-live-arm64.iso"
+              ],
+              "sha256": "4206885a661ed8a55d6bea660506f5d67c1f84e6ece52d8079e338993b20813f"
+            },
             {
               "version": "2026.2",
               "arch": "amd64",
@@ -503,6 +557,15 @@
           "name": "DVD snapshot",
           "versions": [
             {
+              "version": "20261023",
+              "arch": "x86_64",
+              "iso": "openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261023-Media.iso",
+              "urls": [
+                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261023-Media.iso"
+              ],
+              "sha256": "826a5378103c16a283881a27e8ce249f9034bc733ecadd60a4d6f2ad296299f1"
+            },
+            {
               "version": "20261016",
               "arch": "x86_64",
               "iso": "openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261016-Media.iso",
@@ -519,15 +582,6 @@
                 "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261013-Media.iso"
               ],
               "sha256": "dcae88650d8c552b10221839819b477b1dc86e6e14aa138d4e19859f9dcd9c90"
-            },
-            {
-              "version": "20261012",
-              "arch": "x86_64",
-              "iso": "openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261012-Media.iso",
-              "sha256": "288c7cf1c2a8b3257310912c54dc90a7b27f37a09494841006358ae443ab4247",
-              "urls": [
-                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261012-Media.iso"
-              ]
             }
           ]
         },
@@ -535,6 +589,15 @@
           "id": "net",
           "name": "Net installer snapshot",
           "versions": [
+            {
+              "version": "20261023",
+              "arch": "x86_64",
+              "iso": "openSUSE-Tumbleweed-NET-x86_64-Snapshot20261023-Media.iso",
+              "urls": [
+                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20261023-Media.iso"
+              ],
+              "sha256": "77207eaffe25b907d694d1e1c2d8a2356d5990ffd1477175dc922d94c5e1e151"
+            },
             {
               "version": "20261016",
               "arch": "x86_64",
@@ -552,15 +615,6 @@
                 "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20261013-Media.iso"
               ],
               "sha256": "0f56ceed34d63c3ebaa36fa78e32cfb4c08d60ca6de09b1d2982e3a3c3164ec2"
-            },
-            {
-              "version": "20261012",
-              "arch": "x86_64",
-              "iso": "openSUSE-Tumbleweed-NET-x86_64-Snapshot20261012-Media.iso",
-              "sha256": "c7f4ac0c0efb41d1c928cc3958e3e377b1acca159518aa28e11fd85388fbe601",
-              "urls": [
-                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20261012-Media.iso"
-              ]
             }
           ]
         }
@@ -947,6 +1001,15 @@
           "name": "Mokka (KDE)",
           "versions": [
             {
+              "version": "261019",
+              "arch": "x86_64",
+              "iso": "garuda-mokka-linux-garuda-261019.iso",
+              "urls": [
+                "https://iso.builds.garudalinux.org/iso/garuda/mokka/261019/garuda-mokka-linux-garuda-261019.iso"
+              ],
+              "sha256": "7e7896850c1c9d21b6f28f52b82aada7acb90d7727ae63053c9ae196d55c90aa"
+            },
+            {
               "version": "260822",
               "arch": "x86_64",
               "iso": "garuda-mokka-linux-garuda-260822.iso",
@@ -962,6 +1025,15 @@
           "name": "Dr460nized (KDE gaming)",
           "versions": [
             {
+              "version": "261024",
+              "arch": "x86_64",
+              "iso": "garuda-dr460nized-linux-garuda-261024.iso",
+              "urls": [
+                "https://iso.builds.garudalinux.org/iso/garuda/dr460nized/261024/garuda-dr460nized-linux-garuda-261024.iso"
+              ],
+              "sha256": "85676af4e12adc0f31eebd3e37f74126b4157313d39c6d25744793a0bc06157e"
+            },
+            {
               "version": "261017",
               "arch": "x86_64",
               "iso": "garuda-dr460nized-linux-garuda-261017.iso",
@@ -969,15 +1041,6 @@
                 "https://iso.builds.garudalinux.org/iso/garuda/dr460nized/261017/garuda-dr460nized-linux-garuda-261017.iso"
               ],
               "sha256": "74bda18564e182216ced1f5434594e069ea9b3609a92eecf528c4d73821b89ec"
-            },
-            {
-              "version": "261015",
-              "arch": "x86_64",
-              "iso": "garuda-dr460nized-linux-garuda-261015.iso",
-              "urls": [
-                "https://iso.builds.garudalinux.org/iso/garuda/dr460nized/261015/garuda-dr460nized-linux-garuda-261015.iso"
-              ],
-              "sha256": "cfc9a24f8bffaad85c5d4a1504622fd9b758aeaeae232c19b90a72e0c817ba23"
             }
           ]
         },
@@ -1733,6 +1796,16 @@
           "name": "Boot (net installer)",
           "versions": [
             {
+              "version": "9-20261023.1",
+              "arch": "amd64",
+              "iso": "CentOS-Stream-9-20261023.1-x86_64-boot.iso",
+              "urls": [
+                "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-20261023.1-x86_64-boot.iso"
+              ],
+              "sha256": "648510b7f8ec0c04990b6513b1881249bf1880f4c144b67795079e46f6cf5c65",
+              "size": 1605894144
+            },
+            {
               "version": "9-20261013.0",
               "arch": "amd64",
               "iso": "CentOS-Stream-9-20261013.0-x86_64-boot.iso",
@@ -1741,6 +1814,16 @@
               ],
               "sha256": "bcc679766490020b5a1cb068cccb80cde047592ac73b6c980c39897d4e62301e",
               "size": 1572438016
+            },
+            {
+              "version": "10-20261021.0",
+              "arch": "amd64",
+              "iso": "CentOS-Stream-10-20261021.0-x86_64-boot.iso",
+              "urls": [
+                "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/iso/CentOS-Stream-10-20261021.0-x86_64-boot.iso"
+              ],
+              "sha256": "c2ae7abb58077a92744523375ca6e88408b28a010a746733ce1d5a81bff05c90",
+              "size": 950032384
             },
             {
               "version": "10-20261013.0",
@@ -1759,6 +1842,16 @@
           "name": "DVD (full)",
           "versions": [
             {
+              "version": "9-20261023.1",
+              "arch": "amd64",
+              "iso": "CentOS-Stream-9-20261023.1-x86_64-dvd1.iso",
+              "urls": [
+                "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-20261023.1-x86_64-dvd1.iso"
+              ],
+              "sha256": "fedfc8575e3e1fdc0292cf2c2bf02b6327923d59460921553859ff92f95d04e0",
+              "size": 15951527936
+            },
+            {
               "version": "9-20261013.0",
               "arch": "amd64",
               "iso": "CentOS-Stream-9-20261013.0-x86_64-dvd1.iso",
@@ -1767,6 +1860,16 @@
               ],
               "sha256": "5e9abc51b4021029c988e5a7e8aecccdf4ad4558dd8d8f7d212437c6b0887b72",
               "size": 15728967680
+            },
+            {
+              "version": "10-20261021.0",
+              "arch": "amd64",
+              "iso": "CentOS-Stream-10-20261021.0-x86_64-dvd1.iso",
+              "urls": [
+                "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/iso/CentOS-Stream-10-20261021.0-x86_64-dvd1.iso"
+              ],
+              "sha256": "23c0690282e2d0e9602feef99492603e00003319ed74ffb3742ac59fb5e208b2",
+              "size": 10801774592
             },
             {
               "version": "10-20261013.0",
@@ -1791,6 +1894,15 @@
           "id": "extended",
           "name": "Extended (extra packages)",
           "versions": [
+            {
+              "version": "3.24.3",
+              "arch": "x86_64",
+              "iso": "alpine-extended-3.24.3-x86_64.iso",
+              "urls": [
+                "https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/alpine-extended-3.24.3-x86_64.iso"
+              ],
+              "sha256": "ab824af8871695afaea53f6c956764037c91e9a17cebfa6691dafbdaedf7a3ab"
+            },
             {
               "version": "3.24.2",
               "arch": "x86_64",
@@ -1824,6 +1936,15 @@
           "id": "standard",
           "name": "Standard (console only)",
           "versions": [
+            {
+              "version": "3.24.3",
+              "arch": "x86_64",
+              "iso": "alpine-standard-3.24.3-x86_64.iso",
+              "urls": [
+                "https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/alpine-standard-3.24.3-x86_64.iso"
+              ],
+              "sha256": "1629ffe7308d4f3d3eeeed3a97d09ad62293f6d37ef3e483a7306077fdac12be"
+            },
             {
               "version": "3.24.2",
               "arch": "x86_64",
@@ -1901,6 +2022,17 @@
           "id": "live",
           "name": "Live (Amnesic Incognito)",
           "versions": [
+            {
+              "version": "7.15.1",
+              "arch": "amd64",
+              "iso": "tails-amd64-7.15.1.iso",
+              "size": 1879707648,
+              "sha256": "f0e68387ebe327808c0a037886f804f7b2268ae8c66a677e3a6c6241d764e3c7",
+              "urls": [
+                "https://download.tails.net/tails/stable/tails-amd64-7.15.1/tails-amd64-7.15.1.iso",
+                "https://mirrors.edge.kernel.org/tails/stable/tails-amd64-7.15.1.iso"
+              ]
+            },
             {
               "version": "7.15",
               "arch": "amd64",
@@ -2530,13 +2662,13 @@
           "name": "Minimal Installation CD",
           "versions": [
             {
-              "version": "20261011T170049Z",
+              "version": "20261018T124555Z",
               "arch": "amd64",
-              "iso": "install-amd64-minimal-20261011T170049Z.iso",
+              "iso": "install-amd64-minimal-20261018T124555Z.iso",
               "urls": [
-                "https://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-20261011T170049Z.iso"
+                "https://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-20261018T124555Z.iso"
               ],
-              "sha256": "787d6743e1c2200e8d86f602343a344a2c1f04bc0041c1fcff6c0c34b0b8ec11"
+              "sha256": "a0422d9d74c99174417ba2538642e687c838667bbd1ca01293987405116c4c4c"
             }
           ]
         }
