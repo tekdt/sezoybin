@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_utc": "2026-11-01T04:10:25Z",
+  "updated_utc": "2026-11-08T04:16:22Z",
   "source_repo": "https://github.com/tekdt/sezoybin",
   "note": "Data file for the SEZOY 'Linux Distro' download tab. SEZOY downloads urls[0] first and falls through to the next URL on failure. Run update_linux_distros.py to refresh automatically.",
   "distros": [
@@ -123,6 +123,17 @@
           "name": "Workstation Live",
           "versions": [
             {
+              "version": "45",
+              "arch": "x86_64",
+              "iso": "Fedora-Workstation-Live-45-1.4.x86_64.iso",
+              "sha256": "68338c6bfe4f0d64151f2e47efe9f44a8855ad05b460e56b844fb3fa2c9a3beb",
+              "urls": [
+                "https://mirrors.kernel.org/fedora/releases/45/Workstation/x86_64/iso/Fedora-Workstation-Live-45-1.4.x86_64.iso",
+                "https://download.fedoraproject.org/pub/fedora/linux/releases/45/Workstation/x86_64/iso/Fedora-Workstation-Live-45-1.4.x86_64.iso",
+                "https://dl.fedoraproject.org/pub/fedora/linux/releases/45/Workstation/x86_64/iso/Fedora-Workstation-Live-45-1.4.x86_64.iso"
+              ]
+            },
+            {
               "version": "44",
               "arch": "x86_64",
               "iso": "Fedora-Workstation-Live-44-1.7.x86_64.iso",
@@ -150,6 +161,20 @@
           "id": "server-dvd",
           "name": "Server DVD",
           "versions": [
+            {
+              "version": "45",
+              "arch": "x86_64",
+              "iso": "Fedora-Server-netinst-x86_64-45-1.4.iso",
+              "sha256": "a1e916f139a05955b943cf183b020780cca9c399b02b8f5ec4354c9e5c1dff1a",
+              "urls": [
+                "https://mirrors.kernel.org/fedora/releases/45/Server/x86_64/iso/Fedora-Server-netinst-x86_64-45-1.4.iso",
+                "https://download.fedoraproject.org/pub/fedora/linux/releases/45/Server/x86_64/iso/Fedora-Server-netinst-x86_64-45-1.4.iso",
+                "https://dl.fedoraproject.org/pub/fedora/linux/releases/45/Server/x86_64/iso/Fedora-Server-netinst-x86_64-45-1.4.iso",
+                "https://mirrors.kernel.org/fedora/releases/45/Server/x86_64/iso/Fedora-Server-dvd-x86_64-45-1.4.iso",
+                "https://download.fedoraproject.org/pub/fedora/linux/releases/45/Server/x86_64/iso/Fedora-Server-dvd-x86_64-45-1.4.iso",
+                "https://dl.fedoraproject.org/pub/fedora/linux/releases/45/Server/x86_64/iso/Fedora-Server-dvd-x86_64-45-1.4.iso"
+              ]
+            },
             {
               "version": "44",
               "arch": "x86_64",
@@ -321,6 +346,16 @@
           "id": "base",
           "name": "Base ISO (monthly snapshot)",
           "versions": [
+            {
+              "version": "2026.11.01",
+              "arch": "x86_64",
+              "iso": "archlinux-2026.11.01-x86_64.iso",
+              "urls": [
+                "https://geo.mirror.pkgbuild.com/iso/latest/archlinux-2026.11.01-x86_64.iso",
+                "https://mirror.rackspace.com/archlinux/iso/latest/archlinux-2026.11.01-x86_64.iso"
+              ],
+              "sha256": "01bcdcf01af2f7d58f2794899c834770d25c9bfc945bd092b32bb66672a4a216"
+            },
             {
               "version": "2026.10.01",
               "arch": "x86_64",
@@ -557,6 +592,15 @@
           "name": "DVD snapshot",
           "versions": [
             {
+              "version": "20261105",
+              "arch": "x86_64",
+              "iso": "openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261105-Media.iso",
+              "urls": [
+                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261105-Media.iso"
+              ],
+              "sha256": "eb1af503bf8984a0b7af754ff226e5041bfd674a2efea0e9bd95f74ba2d8522f"
+            },
+            {
               "version": "20261030",
               "arch": "x86_64",
               "iso": "openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261030-Media.iso",
@@ -573,15 +617,6 @@
                 "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261023-Media.iso"
               ],
               "sha256": "826a5378103c16a283881a27e8ce249f9034bc733ecadd60a4d6f2ad296299f1"
-            },
-            {
-              "version": "20261016",
-              "arch": "x86_64",
-              "iso": "openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261016-Media.iso",
-              "urls": [
-                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Snapshot20261016-Media.iso"
-              ],
-              "sha256": "2a5d04dfdd254bf27881c2b56c25d1e48fc4138df2ea0ca464f00759ff646b0d"
             }
           ]
         },
@@ -589,6 +624,15 @@
           "id": "net",
           "name": "Net installer snapshot",
           "versions": [
+            {
+              "version": "20261106",
+              "arch": "x86_64",
+              "iso": "openSUSE-Tumbleweed-NET-x86_64-Snapshot20261106-Media.iso",
+              "urls": [
+                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20261106-Media.iso"
+              ],
+              "sha256": "5fda9f4070ae0d692db693b5ee359d995419b57066263daddf417251357ab134"
+            },
             {
               "version": "20261030",
               "arch": "x86_64",
@@ -606,15 +650,6 @@
                 "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20261023-Media.iso"
               ],
               "sha256": "77207eaffe25b907d694d1e1c2d8a2356d5990ffd1477175dc922d94c5e1e151"
-            },
-            {
-              "version": "20261016",
-              "arch": "x86_64",
-              "iso": "openSUSE-Tumbleweed-NET-x86_64-Snapshot20261016-Media.iso",
-              "urls": [
-                "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20261016-Media.iso"
-              ],
-              "sha256": "7f9ceb23ab70e4747c6f787ed0f755be05a0e92f3c17d692595162809af8d60a"
             }
           ]
         }
@@ -1036,6 +1071,15 @@
           "name": "Dr460nized (KDE gaming)",
           "versions": [
             {
+              "version": "261108",
+              "arch": "x86_64",
+              "iso": "garuda-dr460nized-linux-garuda-261108.iso",
+              "urls": [
+                "https://iso.builds.garudalinux.org/iso/garuda/dr460nized/261108/garuda-dr460nized-linux-garuda-261108.iso"
+              ],
+              "sha256": "ce7b4db2976af94798ff8da90ca53e7bdb8ce98f0e6996de27a96cb7efdaa962"
+            },
+            {
               "version": "261101",
               "arch": "x86_64",
               "iso": "garuda-dr460nized-linux-garuda-261101.iso",
@@ -1043,15 +1087,6 @@
                 "https://iso.builds.garudalinux.org/iso/garuda/dr460nized/261101/garuda-dr460nized-linux-garuda-261101.iso"
               ],
               "sha256": "cf07e3458859c84457a7c42ea00cfbfe54a3f4ff9bd9cf07e3e02d9894bd110e"
-            },
-            {
-              "version": "261024",
-              "arch": "x86_64",
-              "iso": "garuda-dr460nized-linux-garuda-261024.iso",
-              "urls": [
-                "https://iso.builds.garudalinux.org/iso/garuda/dr460nized/261024/garuda-dr460nized-linux-garuda-261024.iso"
-              ],
-              "sha256": "85676af4e12adc0f31eebd3e37f74126b4157313d39c6d25744793a0bc06157e"
             }
           ]
         },
@@ -1167,19 +1202,19 @@
           "name": "Base (OpenRC)",
           "versions": [
             {
+              "version": "20261102",
+              "arch": "amd64",
+              "iso": "artix-base-openrc-20261102-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-base-openrc-20261102-x86_64.iso"
+              ]
+            },
+            {
               "version": "20261001",
               "arch": "amd64",
               "iso": "artix-base-openrc-20261001-x86_64.iso",
               "urls": [
                 "https://download.artixlinux.org/iso/artix-base-openrc-20261001-x86_64.iso"
-              ]
-            },
-            {
-              "version": "20260813",
-              "arch": "amd64",
-              "iso": "artix-base-openrc-20260813-x86_64.iso",
-              "urls": [
-                "https://download.artixlinux.org/iso/artix-base-openrc-20260813-x86_64.iso"
               ]
             }
           ]
@@ -1189,19 +1224,19 @@
           "name": "Cinnamon (OpenRC)",
           "versions": [
             {
+              "version": "20261102",
+              "arch": "amd64",
+              "iso": "artix-cinnamon-openrc-20261102-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-cinnamon-openrc-20261102-x86_64.iso"
+              ]
+            },
+            {
               "version": "20261001",
               "arch": "amd64",
               "iso": "artix-cinnamon-openrc-20261001-x86_64.iso",
               "urls": [
                 "https://download.artixlinux.org/iso/artix-cinnamon-openrc-20261001-x86_64.iso"
-              ]
-            },
-            {
-              "version": "20260814",
-              "arch": "amd64",
-              "iso": "artix-cinnamon-openrc-20260814-x86_64.iso",
-              "urls": [
-                "https://download.artixlinux.org/iso/artix-cinnamon-openrc-20260814-x86_64.iso"
               ]
             }
           ]
@@ -1211,19 +1246,19 @@
           "name": "MATE (OpenRC)",
           "versions": [
             {
+              "version": "20261102",
+              "arch": "amd64",
+              "iso": "artix-mate-openrc-20261102-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-mate-openrc-20261102-x86_64.iso"
+              ]
+            },
+            {
               "version": "20261001",
               "arch": "amd64",
               "iso": "artix-mate-openrc-20261001-x86_64.iso",
               "urls": [
                 "https://download.artixlinux.org/iso/artix-mate-openrc-20261001-x86_64.iso"
-              ]
-            },
-            {
-              "version": "20260813",
-              "arch": "amd64",
-              "iso": "artix-mate-openrc-20260813-x86_64.iso",
-              "urls": [
-                "https://download.artixlinux.org/iso/artix-mate-openrc-20260813-x86_64.iso"
               ]
             }
           ]
@@ -1233,19 +1268,19 @@
           "name": "Plasma (OpenRC)",
           "versions": [
             {
+              "version": "20261104",
+              "arch": "amd64",
+              "iso": "artix-plasma-openrc-20261104-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-plasma-openrc-20261104-x86_64.iso"
+              ]
+            },
+            {
               "version": "20261001",
               "arch": "amd64",
               "iso": "artix-plasma-openrc-20261001-x86_64.iso",
               "urls": [
                 "https://download.artixlinux.org/iso/artix-plasma-openrc-20261001-x86_64.iso"
-              ]
-            },
-            {
-              "version": "20260813",
-              "arch": "amd64",
-              "iso": "artix-plasma-openrc-20260813-x86_64.iso",
-              "urls": [
-                "https://download.artixlinux.org/iso/artix-plasma-openrc-20260813-x86_64.iso"
               ]
             }
           ]
@@ -1255,19 +1290,19 @@
           "name": "Xfce (OpenRC)",
           "versions": [
             {
+              "version": "20261102",
+              "arch": "amd64",
+              "iso": "artix-xfce-openrc-20261102-x86_64.iso",
+              "urls": [
+                "https://download.artixlinux.org/iso/artix-xfce-openrc-20261102-x86_64.iso"
+              ]
+            },
+            {
               "version": "20261001",
               "arch": "amd64",
               "iso": "artix-xfce-openrc-20261001-x86_64.iso",
               "urls": [
                 "https://download.artixlinux.org/iso/artix-xfce-openrc-20261001-x86_64.iso"
-              ]
-            },
-            {
-              "version": "20260813",
-              "arch": "amd64",
-              "iso": "artix-xfce-openrc-20260813-x86_64.iso",
-              "urls": [
-                "https://download.artixlinux.org/iso/artix-xfce-openrc-20260813-x86_64.iso"
               ]
             }
           ]
@@ -1837,6 +1872,16 @@
           "name": "Boot (net installer)",
           "versions": [
             {
+              "version": "9-20261103.0",
+              "arch": "amd64",
+              "iso": "CentOS-Stream-9-20261103.0-x86_64-boot.iso",
+              "urls": [
+                "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-20261103.0-x86_64-boot.iso"
+              ],
+              "sha256": "3de18eafb36379231548622d6ff8157148ccec518a8543d6ebe002c1afda3205",
+              "size": 1605894144
+            },
+            {
               "version": "9-20261023.1",
               "arch": "amd64",
               "iso": "CentOS-Stream-9-20261023.1-x86_64-boot.iso",
@@ -1855,6 +1900,16 @@
               ],
               "sha256": "bcc679766490020b5a1cb068cccb80cde047592ac73b6c980c39897d4e62301e",
               "size": 1572438016
+            },
+            {
+              "version": "10-20261103.0",
+              "arch": "amd64",
+              "iso": "CentOS-Stream-10-20261103.0-x86_64-boot.iso",
+              "urls": [
+                "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/iso/CentOS-Stream-10-20261103.0-x86_64-boot.iso"
+              ],
+              "sha256": "db8a1dc480628df954e154d6a6689cfe5618cbb38a84fbc6178bb073eb77a046",
+              "size": 950151168
             },
             {
               "version": "10-20261026.0",
@@ -1893,6 +1948,16 @@
           "name": "DVD (full)",
           "versions": [
             {
+              "version": "9-20261103.0",
+              "arch": "amd64",
+              "iso": "CentOS-Stream-9-20261103.0-x86_64-dvd1.iso",
+              "urls": [
+                "https://mirror.stream.centos.org/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-20261103.0-x86_64-dvd1.iso"
+              ],
+              "sha256": "984a099365da7ce3a93be3adc1eadfda5bb7439028e99e8d0616f11bbc178af8",
+              "size": 15984623616
+            },
+            {
               "version": "9-20261023.1",
               "arch": "amd64",
               "iso": "CentOS-Stream-9-20261023.1-x86_64-dvd1.iso",
@@ -1911,6 +1976,16 @@
               ],
               "sha256": "5e9abc51b4021029c988e5a7e8aecccdf4ad4558dd8d8f7d212437c6b0887b72",
               "size": 15728967680
+            },
+            {
+              "version": "10-20261103.0",
+              "arch": "amd64",
+              "iso": "CentOS-Stream-10-20261103.0-x86_64-dvd1.iso",
+              "urls": [
+                "https://mirror.stream.centos.org/10-stream/BaseOS/x86_64/iso/CentOS-Stream-10-20261103.0-x86_64-dvd1.iso"
+              ],
+              "sha256": "ffc31d9e9b12117e78b485e9fc1bd3bfd20f285ee299bc4b6e02035aee33e719",
+              "size": 10837491712
             },
             {
               "version": "10-20261026.0",
@@ -1956,6 +2031,15 @@
           "name": "Extended (extra packages)",
           "versions": [
             {
+              "version": "3.24.4",
+              "arch": "x86_64",
+              "iso": "alpine-extended-3.24.4-x86_64.iso",
+              "urls": [
+                "https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/alpine-extended-3.24.4-x86_64.iso"
+              ],
+              "sha256": "e14670256c008398f06e985ffa5f2844f4ecc1944b4a004f9dfc1b87265586ce"
+            },
+            {
               "version": "3.24.3",
               "arch": "x86_64",
               "iso": "alpine-extended-3.24.3-x86_64.iso",
@@ -1997,6 +2081,15 @@
           "id": "standard",
           "name": "Standard (console only)",
           "versions": [
+            {
+              "version": "3.24.4",
+              "arch": "x86_64",
+              "iso": "alpine-standard-3.24.4-x86_64.iso",
+              "urls": [
+                "https://dl-cdn.alpinelinux.org/alpine/latest-stable/releases/x86_64/alpine-standard-3.24.4-x86_64.iso"
+              ],
+              "sha256": "92e3e4e4c6b8e265a889278de2a633c0f1456ca52820952666ecb395c3d23582"
+            },
             {
               "version": "3.24.3",
               "arch": "x86_64",
@@ -2746,13 +2839,13 @@
           "name": "Minimal Installation CD",
           "versions": [
             {
-              "version": "20261025T170057Z",
+              "version": "20261101T164556Z",
               "arch": "amd64",
-              "iso": "install-amd64-minimal-20261025T170057Z.iso",
+              "iso": "install-amd64-minimal-20261101T164556Z.iso",
               "urls": [
-                "https://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-20261025T170057Z.iso"
+                "https://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-20261101T164556Z.iso"
               ],
-              "sha256": "f773d3ef7d9c8130c81f2ed0208486039edf58f044a4af4750f4d5373f731404"
+              "sha256": "8a1ff6aec1355d055fad53d22d93b91138d09874e648811b5aa0e032536028d3"
             }
           ]
         }
@@ -2867,6 +2960,16 @@
           "id": "standard",
           "name": "Standard (amd64)",
           "versions": [
+            {
+              "version": "13.03",
+              "arch": "amd64",
+              "iso": "systemrescue-13.03-amd64.iso",
+              "urls": [
+                "https://fastly-cdn.system-rescue.org/releases/13.03/systemrescue-13.03-amd64.iso",
+                "https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/13.03/systemrescue-13.03-amd64.iso/download"
+              ],
+              "sha256": "b71b98ba6b92145524cb1a72206b9888a59861ad6fb05d127faf618ca0136891"
+            },
             {
               "version": "13.02",
               "arch": "amd64",
